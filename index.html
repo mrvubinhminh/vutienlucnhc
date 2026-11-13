@@ -121,6 +121,104 @@ body.hidebar #lib{top:0}
 .clist .ci .row{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:4px}
 .clist .ci .x{margin-left:auto;border:0;background:#fee2e2;color:#991b1b;border-radius:6px;padding:2px 8px;cursor:pointer;font-size:12px}
 #cloudDlg[data-mode="save"] #cloudOpen,#cloudDlg[data-mode="open"] #cloudSave{display:none}
+#lib .groups{display:flex;gap:6px;overflow-x:auto;padding:4px 12px 6px;scrollbar-width:thin}
+#lib .gc{flex:none;display:flex;align-items:center;gap:5px;border:1px solid #cbd5e1;background:#fff;border-radius:10px;padding:6px 10px;cursor:pointer;font-size:13px;color:#0f172a;white-space:nowrap}
+#lib .gc small{background:#eef1f8;border-radius:999px;padding:0 6px;font-size:11px;color:#475569}
+#lib .gc.on{background:#1e293b;border-color:#1e293b;color:#fff}
+#lib .gc.on small{background:rgba(255,255,255,.2);color:#fff}
+#lib .lbar{display:flex;align-items:center;gap:6px;padding:0 12px 4px}
+#lib .lbar select,#lib .lbar button{height:28px;border:1px solid #cbd5e1;border-radius:7px;background:#fff;font-size:12.5px;padding:0 8px;cursor:pointer;color:#0f172a}
+#lib .lbar .hint{margin-left:auto;font-size:11px;color:#94a3b8}
+#lib .tags[hidden]{display:none}
+#lib .sec{display:flex;flex-direction:column;gap:8px}
+#lib .sh{display:flex;align-items:center;gap:8px;padding:6px 4px 2px;font-weight:700;font-size:13.5px;color:#1e293b;cursor:pointer;user-select:none;position:sticky;top:-4px;background:#f8fafc;z-index:1}
+#lib .sh small{background:#e2e8f0;border-radius:999px;padding:0 7px;font-size:11px;font-weight:600}
+#lib .sh .car{transition:transform .15s;color:#64748b}
+#lib .sh button{margin-left:auto;border:0;background:none;color:#2563eb;font-size:12px;cursor:pointer}
+#lib .sec.col .sb{display:none}
+#lib .sec.col .car{transform:rotate(-90deg)}
+#lib .sb,#lib .flat{display:flex;flex-direction:column;gap:8px}
+#lib .it.hi{border-color:#2563eb;box-shadow:0 0 0 2px rgba(37,99,235,.35)}
+#lib .gb{display:inline-flex;align-items:center;gap:3px;background:#fef3c7;color:#92400e;border-radius:6px;padding:1px 7px;font-size:11.5px;cursor:pointer}
+#lib.wide{width:100vw}
+#lib.wide .list{display:block}
+#lib.wide .sb,#lib.wide .list>.flat{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
+#lib.wide .sec{margin-bottom:12px}
+.gpick{display:flex;flex-wrap:wrap;gap:6px}
+.gpick button{border:1px solid #cbd5e1;background:#fff;border-radius:9px;padding:6px 10px;cursor:pointer;font-size:13px}
+.gpick button.on{background:#2563eb;border-color:#2563eb;color:#fff}
+.gpick button.add{border-style:dashed;color:#475569}
+/* ---- Khung câu hỏi nổi (.md) ---- */
+#qp{position:fixed;z-index:25;display:none;flex-direction:column;background:var(--qbg,#fff);color:var(--qtx,#0f172a);border-radius:14px;box-shadow:0 18px 44px rgba(0,0,0,.32);border:1px solid #cbd5e1;
+  resize:both;overflow:hidden;min-width:300px;min-height:180px;--qf:22px}
+#qp.open{display:flex}
+#qp.min{resize:none;min-height:0;height:auto!important}
+#qp.min .qb,#qp.min .qn{display:none}
+#qp .qh{display:flex;align-items:center;gap:4px;padding:6px 6px 6px 10px;background:#1e293b;color:#fff;cursor:move;user-select:none;touch-action:none;flex:none}
+#qp .qh .tt{flex:1;min-width:0;font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#qp .qh .tt small{font-weight:400;color:#cbd5e1;margin-left:6px}
+#qp .qh button{border:0;background:rgba(255,255,255,.13);color:#fff;border-radius:7px;height:28px;min-width:28px;padding:0 7px;cursor:pointer;font-size:13px;flex:none}
+#qp .qh button:hover{background:#2563eb}
+#qp .qh button.on{background:#f59e0b;color:#111}
+#qp .qb{flex:1;overflow:auto;padding:14px 18px 18px;font-size:var(--qf);line-height:1.55}
+#qp .qb p{margin:.35em 0}
+#qp .qh{flex-wrap:wrap}
+#qp .qh .tt{flex:1 1 150px}
+#qp .qh .pg{font-weight:400;font-size:12px;color:#fde68a;margin-left:6px}
+#qp .qed{display:flex;flex-direction:column;height:100%;gap:8px}
+#qp .qed textarea{flex:1;min-height:120px;width:100%;font:15px/1.5 ui-monospace,Consolas,monospace;border:1px solid #94a3b8;border-radius:8px;padding:10px;resize:none;color:#0f172a;background:#fff}
+#qp .qed .eb{display:flex;gap:6px;flex-wrap:wrap;font-size:13px}
+#qp .qed .eb button{border:1px solid #cbd5e1;background:#fff;color:#0f172a;border-radius:8px;padding:6px 10px;cursor:pointer;font-size:13px}
+#qp .qed .eb button.p{background:#2563eb;border-color:#2563eb;color:#fff}
+#qp .qed .eb small{color:#64748b;align-self:center;font-size:12px}
+#qp .qn button.sub{min-width:14px;height:8px;padding:0;border-radius:4px;align-self:center;background:#cbd5e1;border:0}
+#qp .qn button.sub.on{background:#2563eb}
+#qp .qb h1,#qp .qb h2,#qp .qb h3,#qp .qb h4{margin:.4em 0 .3em;line-height:1.3}
+#qp .qb h1{font-size:1.35em}#qp .qb h2{font-size:1.2em}#qp .qb h3{font-size:1.08em}
+#qp .qb img{max-width:100%;border-radius:8px}
+#qp .qb table{border-collapse:collapse;margin:.4em 0}
+#qp .qb td,#qp .qb th{border:1px solid #94a3b8;padding:.2em .6em}
+#qp .qb ul,#qp .qb ol{margin:.3em 0;padding-left:1.4em}
+#qp .qb code{background:rgba(148,163,184,.2);border-radius:4px;padding:0 .25em;font-size:.9em}
+#qp .qb .katex{font-size:1.08em;color:var(--qm,#1d4ed8)}
+#qp .qb td,#qp .qb th{border-color:var(--qbd,#94a3b8)}
+#qp .sum{display:none;margin:.7em 0 .2em;border:2px solid #f59e0b;background:rgba(245,158,11,.10);border-radius:.6em;padding:.45em .7em}
+#qp .sum.show{display:block}
+#qp .sum .sh{font-weight:700;color:#d97706;font-size:.85em;margin-bottom:.25em}
+#qp .gtkl{border-collapse:collapse;margin:.2em 0}
+#qp .gtkl th{border:0!important;border-right:3px solid currentColor!important;padding:.15em .7em .15em .2em;vertical-align:middle;font-weight:800;color:var(--qacc,#2563eb)}
+#qp .gtkl td{border:0!important;padding:.15em .6em}
+#qp .gtkl tr+tr th,#qp .gtkl tr+tr td{border-top:2px solid var(--qbd,#cbd5e1)!important}
+#qp .qmenu{display:none;position:absolute;top:44px;right:8px;z-index:3;background:#111422;color:#eef0fa;border:1px solid #2d3350;border-radius:10px;padding:6px;width:250px;box-shadow:0 12px 30px rgba(0,0,0,.35);font-size:13px}
+#qp .qmenu.open{display:block}
+#qp .qmenu h5{margin:6px 6px 4px;font-size:11px;color:#9aa3c7;text-transform:uppercase;letter-spacing:.04em}
+#qp .qmenu button{display:flex;align-items:center;gap:8px;width:100%;border:0;background:none;color:inherit;text-align:left;padding:6px 8px;border-radius:7px;cursor:pointer;font-size:13px}
+#qp .qmenu button:hover{background:#252b45}
+#qp .qmenu button.on{background:#2563eb}
+#qp .qmenu i{width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,.5);flex:none}
+#qp .opts{display:grid;gap:.35em;margin:.5em 0}
+#qp .opt{display:flex;gap:.45em;align-items:baseline;border:2px solid var(--qbd,#e2e8f0);border-radius:.5em;padding:.25em .55em;cursor:pointer;background:var(--qopt,#f8fafc);text-align:left;font:inherit;color:inherit}
+#qp .opt b{color:var(--qacc,#2563eb);flex:none}
+#qp .opt:hover{border-color:#93c5fd}
+#qp .opt.pick{border-color:#2563eb;background:rgba(37,99,235,.16)}
+#qp .opt.right{border-color:#16a34a;background:rgba(22,163,74,.22)}
+#qp .opt.wrong{border-color:#dc2626;background:rgba(220,38,38,.2)}
+#qp .tf{display:grid;grid-template-columns:1fr auto;gap:.3em .6em;align-items:center;margin:.5em 0}
+#qp .tf .st{display:flex;gap:.4em}
+#qp .tf .st b{color:var(--qacc,#2563eb)}
+#qp .tf .bt{display:flex;gap:.25em}
+#qp .tf .bt button{border:2px solid var(--qbd,#cbd5e1);background:var(--qopt,#fff);color:var(--qtx,#0f172a);border-radius:.4em;width:2em;height:1.7em;cursor:pointer;font:inherit;font-size:.8em;font-weight:700}
+#qp .tf .bt button.pick{border-color:#2563eb;background:rgba(37,99,235,.2)}
+#qp .tf .bt button.right{border-color:#16a34a;background:rgba(22,163,74,.3)}
+#qp .tf .bt button.wrong{border-color:#dc2626;background:rgba(220,38,38,.25)}
+#qp .ans{margin-top:.7em;border-top:2px dashed var(--qbd,#cbd5e1);padding-top:.5em;display:none}
+#qp .ans.show{display:block}
+#qp .ans .k{display:inline-block;background:#dcfce7;color:#166534;border-radius:.4em;padding:.05em .5em;font-weight:700;margin-bottom:.3em}
+#qp .qn{display:flex;gap:4px;padding:6px 8px;border-top:1px solid var(--qbd,#e2e8f0);overflow-x:auto;flex:none;background:var(--qopt,#f8fafc)}
+#qp .qn button{flex:none;min-width:30px;height:28px;border:1px solid #cbd5e1;background:#fff;border-radius:7px;cursor:pointer;font-size:12.5px;font-weight:600}
+#qp .qn button.on{background:#2563eb;border-color:#2563eb;color:#fff}
+#qp .qn button.done{border-color:#16a34a;color:#166534}
+.qcode{width:100%;height:46vh;font:13px/1.5 ui-monospace,Consolas,monospace;border:1px solid #cbd5e1;border-radius:8px;padding:10px}
 </style>
 </head>
 <body>
@@ -133,6 +231,7 @@ body.hidebar #lib{top:0}
     <input id="addr" placeholder="Dán địa chỉ trang web / YouTube / GeoGebra / Google Slides… rồi Enter" spellcheck="false">
     <button class="btn ic" id="starBtn" title="Lưu thẻ đang mở vào thư viện link (Ctrl+S)">⭐</button>
     <button class="btn" id="libBtn" title="Thư viện link đã lưu — Google Sheet (Ctrl+K)">📚 <span class="hide-s">Thư viện</span></button>
+    <button class="btn" id="qsBtn" title="Câu hỏi từ file .md — khung nổi, chuyển câu, đáp án ẩn (chuột phải: mở bộ khác)">❓ <span class="hide-s">Câu hỏi</span></button>
     <button class="btn" id="mathBtn" title="Mở nhanh bảng, GeoGebra, Desmos, PhET">🧮 <span class="hide-s">Toán</span> ▾</button>
     <button class="btn ic" id="fileBtn" title="Mở file PDF / ảnh / video / HTML từ máy (hoặc kéo thả vào)">📂</button>
     <button class="btn ic" id="penBtn" title="Hiện / ẩn bút vẽ (thanh công cụ nằm dọc ↔ ngang: nút ▭ trên thanh)">✏️</button>
@@ -180,9 +279,12 @@ body.hidebar #lib{top:0}
   <div id="stageWrap"><iframe id="stage" title="Vùng dạy học" allow="fullscreen; clipboard-read; clipboard-write; autoplay; encrypted-media; picture-in-picture; display-capture; microphone; camera"></iframe></div>
 </div>
 <aside id="lib" aria-label="Thư viện link">
-  <div class="lh"><b>📚 Thư viện link dạy học</b><button id="libSetup" title="Kết nối Google Sheet">⚙ Google Sheet</button><button id="libClose" title="Đóng">✕</button></div>
+  <div class="lh"><b>📚 Thư viện link dạy học</b><button id="libWide" title="Mở rộng thư viện ra cả màn hình (xem dạng lưới)">⤢ Mở rộng</button><button id="libSetup" title="Kết nối Google Sheet">⚙ Google Sheet</button><button id="libClose" title="Đóng">✕</button></div>
   <div class="sync" id="libSync">💾 Chỉ lưu trên máy này<a id="libSyncBtn"></a></div>
-  <div class="ls"><input id="libQ" placeholder="🔎 Tìm theo tên, tag, ghi chú, địa chỉ…" spellcheck="false"></div>
+  <div class="ls"><input id="libQ" placeholder="🔎 Tìm theo tên, nhóm, tag, ghi chú, địa chỉ… (gõ không dấu cũng được)" spellcheck="false"></div>
+  <div class="groups" id="libGroups"></div>
+  <div class="lbar"><select id="libSort" title="Sắp xếp"><option value="recent">🕘 Dùng gần đây</option><option value="most">🔥 Hay dùng nhất</option><option value="newest">🆕 Mới lưu</option><option value="az">🔤 Tên A → Z</option></select>
+    <button id="libTagBtn" title="Hiện / ẩn danh sách tag">🏷 Tag</button><span class="hint">↑↓ chọn · Enter mở</span></div>
   <div class="tags" id="libTags"></div>
   <div class="list" id="libList"></div>
   <div class="lf"><button id="libOpenAll" title="Mở tất cả link đang lọc thành các thẻ">▶ Mở cả bộ</button><button class="p" id="libAdd">⭐ Lưu thẻ đang mở</button></div>
@@ -190,6 +292,7 @@ body.hidebar #lib{top:0}
 <dialog id="saveDlg"><form class="dlg frm" method="dialog" id="saveFrm" style="width:min(560px,92vw)">
   <h3 id="saveTitle">⭐ Lưu link vào thư viện</h3>
   <label>Tên gợi nhớ</label><input id="sfTitle" required>
+  <label>Nhóm <span class="muted">(để tra cứu nhanh trong thư viện)</span></label><div class="gpick" id="sfGroup"></div>
   <label>Địa chỉ</label><input id="sfUrl" required spellcheck="false">
   <label>Tag <span class="muted">(Enter hoặc dấu phẩy để thêm — ví dụ: Lớp 11, Chương 4, Bài 11, GeoGebra)</span></label>
   <div class="tagbox" id="sfTags"><input id="sfTagIn" placeholder="Gõ tag…" autocomplete="off"></div>
@@ -212,7 +315,7 @@ body.hidebar #lib{top:0}
     <li><b>Sao chép URL ứng dụng web</b> (dạng <code>https://script.google.com/macros/s/…/exec</code>) → dán vào ô dưới cùng với mật khẩu → <b>Kiểm tra &amp; lưu</b>.</li>
     <li><b>Máy khác</b> (máy trường, máy chiếu): mở Bảng Dạy Học → ⚙ Cài đặt → dán <b>cùng URL + mật khẩu</b> là thấy đủ link và bản vẽ.</li>
   </ol></details>
-  <details><summary><b>Đã cài bản cũ? Cập nhật mã</b> (cần khi dùng chức năng lưu bản vẽ)</summary>
+  <details><summary><b>Đã cài bản cũ? Cập nhật mã</b> (cần để lưu bản vẽ và lưu <b>nhóm link</b> lên Sheet — mã hiện tại: phiên bản 3)</summary>
   <ol>
     <li>Mở lại Apps Script của bảng tính → xoá mã cũ → dán mã mới (nút 📋) → giữ nguyên dòng KEY cũ → 💾 Lưu.</li>
     <li><b>Triển khai → Quản lý các bản triển khai</b> → ✏️ Chỉnh sửa → <i>Phiên bản</i>: <b>Phiên bản mới</b> → Triển khai. URL giữ nguyên, không phải dán lại.</li>
@@ -251,10 +354,10 @@ body.hidebar #lib{top:0}
     <div class="acts"><button type="button" id="coClose">Đóng</button></div>
   </div>
 </div></dialog>
-<script type="text/plain" id="gas-code">// Bảng Dạy Học Trực Quan — Thư viện link + Bản vẽ (Vũ Tiến Lực) · phiên bản 2
+<script type="text/plain" id="gas-code">// Bảng Dạy Học Trực Quan — Thư viện link + Nhóm + Bản vẽ (Vũ Tiến Lực) · phiên bản 3
 const KEY = 'doi-mat-khau-nay';            // ← đổi thành mật khẩu riêng, nhập giống hệt trong ứng dụng
 const SHEET = 'Link dạy học';
-const HEAD = ['id', 'Thời gian lưu', 'Tiêu đề', 'Link', 'Loại', 'Tag', 'Ghi chú', 'Lượt mở', 'Mở gần nhất'];
+const HEAD = ['id', 'Thời gian lưu', 'Tiêu đề', 'Link', 'Loại', 'Tag', 'Ghi chú', 'Lượt mở', 'Mở gần nhất', 'Nhóm'];
 const SHEET_DRAW = 'Bản vẽ';
 const HEAD_DRAW = ['id', 'Thời gian lưu', 'Tên bản vẽ', 'Tag', 'Ghi chú', 'Số thẻ', 'Các trang / link', 'Dung lượng (KB)', 'File dữ liệu', 'fileId'];
 const FOLDER = 'Bảng Dạy Học - bản vẽ';
@@ -270,7 +373,11 @@ function sheetOf_(name, head, widths) {
   }
   return s;
 }
-const sheet_ = () => sheetOf_(SHEET, HEAD, [0, 0, 260, 320, 0, 200, 300]);
+function sheet_() {
+  const s = sheetOf_(SHEET, HEAD, [0, 0, 260, 320, 0, 200, 300, 0, 0, 150]);
+  if (s.getRange(1, 10).getValue() === '') s.getRange(1, 10).setValue('Nhóm').setFontWeight('bold').setBackground('#1e293b').setFontColor('#ffffff');   // bảng tạo từ mã cũ
+  return s;
+}
 const sheetDraw_ = () => sheetOf_(SHEET_DRAW, HEAD_DRAW, [0, 0, 240, 180, 260, 0, 360, 0, 220]);
 function folder_() {
   const it = DriveApp.getFoldersByName(FOLDER);
@@ -283,7 +390,7 @@ const rowIndex_ = (s, id) => s.getRange(1, 1, Math.max(1, s.getLastRow()), 1).ge
 function doGet(e) {
   const p = e.parameter || {};
   if ((p.key || '') !== KEY) return out_({ ok: false, error: 'Sai mật khẩu (KEY)' });
-  if (p.action === 'ping') return out_({ ok: true, v: 2 });
+  if (p.action === 'ping') return out_({ ok: true, v: 3 });
   if (p.action === 'drawings') {
     const v = sheetDraw_().getDataRange().getValues();
     const rows = v.slice(1).filter((r) => r[0] !== '').map((r) => ({
@@ -303,9 +410,9 @@ function doGet(e) {
   const rows = v.slice(1).filter((r) => r[0] !== '').map((r) => ({
     id: String(r[0]), time: iso_(r[1]), title: String(r[2]), url: String(r[3]), type: String(r[4]),
     tags: String(r[5] || '').split(',').map((x) => x.trim()).filter(String), note: String(r[6] || ''),
-    opens: Number(r[7]) || 0, last: iso_(r[8])
+    opens: Number(r[7]) || 0, last: iso_(r[8]), group: String(r[9] || '')
   }));
-  return out_({ ok: true, rows, v: 2 });
+  return out_({ ok: true, rows, v: 3 });
 }
 
 function doPost(e) {
@@ -335,7 +442,7 @@ function doPost(e) {
     for (const op of d.ops || [d]) {
       if (op.action === 'upsert') {
         const r = op.row;
-        const vals = [r.id, r.time ? new Date(r.time) : new Date(), r.title, r.url, r.type, (r.tags || []).join(', '), r.note || '', r.opens || 0, r.last ? new Date(r.last) : ''];
+        const vals = [r.id, r.time ? new Date(r.time) : new Date(), r.title, r.url, r.type, (r.tags || []).join(', '), r.note || '', r.opens || 0, r.last ? new Date(r.last) : '', r.group || ''];
         const n = rowOf(r.id);
         if (n > 1) s.getRange(n, 1, 1, vals.length).setValues([vals]); else { s.appendRow(vals); ids.push(String(r.id)); }
       } else if (op.action === 'delete') {
@@ -349,7 +456,39 @@ function doPost(e) {
   } finally { lock.releaseLock(); }
 }
 </script>
-<input type="file" id="fileIn" accept="application/pdf,image/*,video/*,.html,.htm" multiple hidden>
+<div id="qp" role="dialog" aria-label="Câu hỏi">
+  <div class="qh" id="qpHead"><span class="tt" id="qpTitle">Câu hỏi</span>
+    <button id="qpHome" title="Trở lại ban đầu: về câu 1, ẩn hết đáp án, xoá lựa chọn (phím Home)">⏮</button><button id="qpPrev" title="Câu / trang trước (←)">◀</button><button id="qpNext" title="Câu / trang sau (→)">▶</button>
+    <button id="qpSmall" title="Chữ nhỏ hơn">A−</button><button id="qpBig" title="Chữ to hơn">A+</button>
+    <button id="qpAns" title="Hiện / ẩn đáp án & lời giải">👁 Đáp án</button>
+    <button id="qpSum" title="Hiện / ẩn tóm tắt đề (GT / KL) — phím T">📝 Tóm tắt</button>
+    <button id="qpTheme" title="Màu nền khung & màu công thức">🎨</button>
+    <button id="qpEdit" title="Chỉnh sửa câu này ngay trong khung (phím E)">✏️</button>
+    <button id="qpBoard" title="Chép câu này lên bảng vẽ (để viết, gạch chân trên đó)">📌</button>
+    <button id="qpMin" title="Thu gọn / mở rộng">▁</button><button id="qpClose" title="Đóng khung câu hỏi">✕</button>
+  </div>
+  <div class="qmenu" id="qpMenu"></div>
+  <div class="qb" id="qpBody"></div>
+  <div class="qn" id="qpNav"></div>
+</div>
+<dialog id="qsDlg"><div class="dlg frm" style="width:min(820px,94vw)">
+  <h3>❓ Bộ câu hỏi từ Markdown (.md)</h3>
+  <p class="muted">Mỗi câu cách nhau bằng một dòng chỉ có <code>---</code>. Công thức trong <code>$...$</code>. Phương án <code>A. B. C. D.</code> mỗi dòng một phương án;
+    mệnh đề đúng/sai <code>a) b) c) d)</code>; dòng <code>+++</code> trong một câu là <b>dấu ngắt slide</b> (câu dài chia nhiều trang, ▶ để sang trang); phần <code>Tóm tắt:</code> (dòng <code>GT:</code> / <code>KL:</code>) hiện khi bấm 📝; dòng <code>Đáp án: …</code> và phần <code>Lời giải:</code> được ẩn cho tới khi bấm 👁.</p>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin:8px 0">
+    <button type="button" class="btn2" id="qsFile">📂 Mở file .md…</button>
+    <button type="button" class="btn2" id="qsSample">⬇ Tải file mẫu .md</button>
+    <button type="button" class="btn2" id="qsUseSample">👀 Xem thử bằng file mẫu</button>
+    <button type="button" class="btn2" id="qsSample2">⬇ Mẫu câu hỏi + tóm tắt (GT/KL)</button>
+    <button type="button" class="btn2" id="qsUseSample2">👀 Xem thử mẫu tóm tắt</button>
+  </div>
+  <label>Hoặc dán nội dung .md vào đây</label>
+  <textarea class="qcode" id="qsText" spellcheck="false" placeholder="**Câu 1.** Nội dung câu hỏi có công thức $x^2 - 1 = 0$&#10;A. ...&#10;B. ...&#10;Đáp án: A&#10;---&#10;**Câu 2.** ..."></textarea>
+  <p class="muted" id="qsMsg"></p>
+  <div class="acts"><button type="button" id="qsClose">Đóng</button><button type="button" class="p" id="qsLoad">▶ Hiện khung câu hỏi</button></div>
+</div></dialog>
+<input type="file" id="qsIn" accept=".md,.markdown,.txt,text/markdown,text/plain" hidden>
+<input type="file" id="fileIn" accept="application/pdf,image/*,video/*,.html,.htm,.md,.markdown" multiple hidden>
 <input type="file" id="sesIn" accept=".json,application/json" hidden>
 <div id="toast"></div>
 <dialog id="help"><div class="dlg">
@@ -360,7 +499,8 @@ function doPost(e) {
     <li><b>Mỗi thẻ có nét vẽ riêng</b>: đổi thẻ là đổi bộ nét vẽ; quay lại thẻ cũ nét vẫn còn. Bấm đúp tên thẻ để đổi tên.</li>
     <li><b>Bút vẽ</b>: thanh công cụ ở mép trái vùng dạy học (nút ▭ trên thanh: đứng dọc ↔ nằm ngang). Chọn <b>mũi tên</b> (hoặc <kbd>Esc</kbd>) để thao tác với trang web bên dưới (cuộn, bấm, kéo GeoGebra…), chọn bút để vẽ đè lên.
       Có đủ hình phẳng, hình không gian, công thức LaTeX, thước kẻ, thước đo góc, compa, đồng hồ đếm ngược, đèn rọi.</li>
-    <li><b>Thư viện link</b>: ⭐ (<kbd>Ctrl+S</kbd>) lưu thẻ đang mở kèm <b>tag</b> (Lớp, Chương, Bài…) và <b>ghi chú</b>; 📚 (<kbd>Ctrl+K</kbd>) mở danh sách đã lưu: tìm, lọc theo tag, bấm để mở lại, <b>▶ Mở cả bộ</b> mở mọi link của bài thành các thẻ. Bấm ⚙ trong thư viện để nối <b>Google Sheet</b> (dùng chung trên mọi máy).</li>
+    <li><b>❓ Câu hỏi (.md)</b>: mở / kéo thả file Markdown (các câu cách nhau bằng dòng <code>---</code>, công thức <code>$…$</code>) → câu hỏi hiện trong <b>khung nổi</b> kéo di chuyển, kéo góc để đổi cỡ, A−/A+ cỡ chữ, ◀ ▶ hoặc phím ← → chuyển câu, 👁 hiện đáp án & lời giải, 📝 tóm tắt đề (GT/KL, phím T), 🎨 đổi nền khung & màu công thức tương phản, 📌 chép câu lên bảng vẽ. Có <b>file mẫu</b> tải về trong hộp ❓.</li>
+    <li><b>Thư viện link</b>: ⭐ (<kbd>Ctrl+S</kbd>) lưu thẻ đang mở vào <b>nhóm</b> (Dạy học, Phần mềm Toán, Video, Đề thi, Công cụ, Tiện ích, Tra cứu… hoặc nhóm tự tạo) kèm <b>tag</b> (Lớp, Chương, Bài…) và <b>ghi chú</b>; 📚 (<kbd>Ctrl+K</kbd>) mở danh sách đã lưu: tìm, lọc theo tag, bấm để mở lại, <b>▶ Mở cả bộ</b> mở mọi link của bài thành các thẻ. Bấm ⚙ trong thư viện để nối <b>Google Sheet</b> (dùng chung trên mọi máy).</li>
     <li><b>Bản vẽ trên Google Sheet</b>: 💾 Buổi dạy → <b>☁ Lưu bản vẽ</b> (lưu mọi thẻ, địa chỉ trang, nét vẽ, chữ, công thức) → ở máy khác: 💾 Buổi dạy → <b>☁ Mở bản vẽ đã lưu</b>. Cài đặt kết nối: nút <b>⚙</b> trên thanh trên.</li>
     <li><b>Sao chép · dán</b>: chọn công cụ <b>Chọn</b> (phím <kbd>S</kbd>, trong nhóm tẩy/di chuyển), kéo khung hoặc bấm vào nét/chữ (<kbd>Shift</kbd>+bấm để chọn thêm, <kbd>Ctrl+A</kbd> chọn hết).
       <kbd>Ctrl+C</kbd> sao chép · <kbd>Ctrl+X</kbd> cắt · <kbd>Ctrl+V</kbd> dán (sang thẻ/trang khác được) · <kbd>Ctrl+D</kbd> nhân bản · kéo hoặc phím mũi tên để dời · <kbd>Delete</kbd> xoá.
@@ -392,6 +532,7 @@ function doPost(e) {
   const TOOLS = [
     ['cursor', 'V', 'Chuột – thao tác với trang (Esc)', '<path d="M5 3l14 8-6 1.5L10 19z"/>'],
     ['pen', 'P', 'Bút (P)', '<path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/>'],
+    ['nib', 'B', 'Bút mài (B) – nét thanh nét đậm như bút máy', '<path d="M12 2l4 7-4 9-4-9z"/><path d="M12 9v4"/><path d="M4 22c3-1 5-3 8-4" stroke-width="2.6"/>'],
     ['hl', 'H', 'Bút dạ quang (H)', '<path d="M9 15l-4 4h6l1-1"/><path d="M9 15l7-11 4 3-7 11z"/>'],
     ['laser', 'K', 'Bút laser – tự mờ (K)', '<circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>'],
     ['line', 'L', 'Đường thẳng (L) – giữ Shift để bắt góc', '<path d="M5 19L19 5"/>'],
@@ -418,7 +559,7 @@ function doPost(e) {
 
   /* ---------------- trạng thái ---------------- */
   const st = {
-    visible: false, tool: 'pen', color: COLORS[0], width: 4,
+    visible: false, tool: 'pen', color: '#111827', width: 4,   // mặc định: nét đen
     pages: [], cur: 0, board: false,
     fx: { cursor: false, spot: false },
     snap: true, tpl: 'chop3', vert: true,
@@ -482,6 +623,8 @@ function doPost(e) {
   .menu.open{display:block}
   .menu button{display:block;width:100%;text-align:left;background:none;border:0;color:#e8ebf7;padding:7px 10px;border-radius:7px;cursor:pointer;font-size:13px}
   .menu button:hover,.menu button.on{background:#252b45}
+  .menu .row-c .chip.on{background:#2563eb!important;color:#fff}
+    .b[data-ptmain].on circle{fill:#fff;stroke:#fff}
   #toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:#111422;color:#fff;padding:8px 16px;border-radius:10px;font-size:13px;opacity:0;transition:.25s;pointer-events:none;border:1px solid #2d3350}
   #toast.show{opacity:1}
   /* dụng cụ hình học: thước kẻ, thước đo góc */
@@ -775,6 +918,44 @@ function doPost(e) {
     }
     const l = pts[pts.length - 1]; c.lineTo(l[0], l[1]); c.stroke();
   }
+  // Bút mài: ngòi dẹt nghiêng ~40° → nét ngang/xiên lên đậm, nét xiên xuống mảnh; có lực nhấn bút (nếu có)
+  const NIB_ANG = -0.7;
+  function strokeNib(c, o) {
+    let P = o.pts.map((v, i) => [v[0], v[1], o.pr && o.pr[i] != null ? o.pr[i] : 0.5]);
+    // bỏ điểm quá sát, làm mượt 2 lần (Chaikin)
+    P = P.filter((v, i) => i === 0 || i === P.length - 1 || Math.hypot(v[0] - P[i - 1][0], v[1] - P[i - 1][1]) > 0.8);
+    for (let k = 0; k < 2 && P.length > 2; k++) {
+      const Q = [P[0]];
+      for (let i = 0; i < P.length - 1; i++) { const a = P[i], b = P[i + 1]; Q.push([a[0] * .75 + b[0] * .25, a[1] * .75 + b[1] * .25, a[2] * .75 + b[2] * .25], [a[0] * .25 + b[0] * .75, a[1] * .25 + b[1] * .75, a[2] * .25 + b[2] * .75]); }
+      Q.push(P[P.length - 1]); P = Q;
+    }
+    const base = (o.w || 4) * 2.0, n = P.length;
+    c.fillStyle = o.color;
+    if (n < 2) { c.beginPath(); c.arc(P[0][0], P[0][1], base * 0.35, 0, 7); c.fill(); return; }
+    let W = P.map((v, i) => {
+      const a = P[Math.max(0, i - 2)], b = P[Math.min(n - 1, i + 2)];
+      const th = Math.atan2(b[1] - a[1], b[0] - a[0]);
+      return base * (0.2 + 0.8 * Math.abs(Math.sin(th - NIB_ANG))) * (0.55 + 0.9 * Math.min(1, v[2]));
+    });
+    for (let k = 0; k < 2; k++) W = W.map((w, i) => (W[Math.max(0, i - 1)] + 2 * w + W[Math.min(n - 1, i + 1)]) / 4);
+    const tp = Math.min(6, Math.floor(n / 4));   // vuốt nhọn nhẹ ở đầu / cuối nét
+    for (let i = 0; i < tp; i++) { const f = 0.45 + 0.55 * (i + 1) / (tp + 1); W[i] *= f; W[n - 1 - i] *= f; }
+    const L = [], R = [];
+    for (let i = 0; i < n; i++) {
+      const a = P[Math.max(0, i - 1)], b = P[Math.min(n - 1, i + 1)];
+      let dx = b[0] - a[0], dy = b[1] - a[1]; const d = Math.hypot(dx, dy) || 1; dx /= d; dy /= d;
+      const h = W[i] / 2;
+      L.push([P[i][0] - dy * h, P[i][1] + dx * h]); R.push([P[i][0] + dy * h, P[i][1] - dx * h]);
+    }
+    const side = (arr, first) => {
+      if (first) c.moveTo(arr[0][0], arr[0][1]); else c.lineTo(arr[0][0], arr[0][1]);
+      for (let i = 1; i < arr.length - 1; i++) c.quadraticCurveTo(arr[i][0], arr[i][1], (arr[i][0] + arr[i + 1][0]) / 2, (arr[i][1] + arr[i + 1][1]) / 2);
+      c.lineTo(arr[arr.length - 1][0], arr[arr.length - 1][1]);
+    };
+    c.beginPath(); side(L, true); side(R.reverse(), false); c.closePath(); c.fill();
+    c.beginPath(); c.arc(P[0][0], P[0][1], W[0] / 2, 0, 7); c.fill();
+    c.beginPath(); c.arc(P[n - 1][0], P[n - 1][1], W[n - 1] / 2, 0, 7); c.fill();
+  }
   function drawObj(c, o) {
     c.save();
     c.lineCap = 'round'; c.lineJoin = 'round';
@@ -782,7 +963,8 @@ function doPost(e) {
     c.strokeStyle = o.color; c.lineWidth = o.w;
     if (o.dash) dashFor(c, o);
     if (o.t === 'hl') { c.globalAlpha = 0.35; c.lineWidth = o.w * 4; c.lineCap = 'butt'; }
-    if (o.t === 'pen' || o.t === 'hl') strokePath(c, o.pts);
+    if (o.t === 'pen' && o.nib) strokeNib(c, o);
+    else if (o.t === 'pen' || o.t === 'hl') strokePath(c, o.pts);
     else if (o.t === 'line' || o.t === 'arrow') {
       const [x1, y1, x2, y2] = o.p;
       c.beginPath(); c.moveTo(x1, y1); c.lineTo(x2, y2); c.stroke();
@@ -950,6 +1132,35 @@ function doPost(e) {
   const GEO_TOOLS = ['dline', 'point', 'mid', 'inter', 'par', 'face', 'rangle', 'angle', 'tick', 'tpl'];
   const geo = { sel: [], ref: null, hover: null, face: [] };
   const LABEL_SEQ = 'MNPQEFHKIJGRTUVXYZABCDSO'.split('');
+  // Tuỳ chọn công cụ Điểm: chấm đỏ, hỏi tên, cỡ chữ tên
+  const PT_RED = '#dc2626';
+  const ptOpt = { red: true, ask: true, ls: 1.2 };
+  try { chrome.storage.local.get('ptOpts').then((r) => { if (r && r.ptOpts) Object.assign(ptOpt, r.ptOpts); }).catch(() => {}); } catch (e) {}
+  const savePtOpt = () => { try { chrome.storage.local.set({ ptOpts: { ...ptOpt } }); } catch (e) {} };
+  // ô nhập tên điểm ngay tại chỗ (chữ lớn), Enter: xong · Esc: bỏ tên
+  let nameBox = null;
+  function askName(idx, suggest) {
+    const P = page(), o = P.objs[idx]; if (!o) return;
+    if (nameBox) nameBox.done(true);
+    if (nameHook) nameHook();
+    const fs = 2 * (18 + Math.min(8, (o.w || 4) * 1.2)) * (o.ls || 1);
+    const inp = mk('input', { value: suggest != null ? suggest : (o.label || ''), maxLength: 6, spellcheck: false, title: 'Tên điểm — Enter: xong · Esc: không đặt tên' });
+    Object.assign(inp.style, { position: 'fixed', left: (o.x + (o.lx || 0) - fs * 0.9) + 'px', top: (o.y + (o.ly || 0) - fs * 0.75) + 'px', width: (fs * 1.8) + 'px', height: (fs * 1.5) + 'px',
+      font: `italic ${fs}px "Times New Roman", "Cambria Math", serif`, textAlign: 'center', color: o.color, background: 'rgba(255,255,255,.92)', border: '2px solid #2563eb', borderRadius: '8px', pointerEvents: 'auto', zIndex: 5, padding: '0', outline: 'none' });
+    root.append(inp);
+    const done = (keep) => {
+      if (!nameBox) return; nameBox = null; inp.remove();
+      const v = keep ? inp.value.trim().slice(0, 6) : '';
+      const Q = page(); if (Q.objs[idx] === o) { Q.objs[idx] = { ...o, label: v }; renderInk(); }
+      if (nameHook) nameHook(); renderLive();
+    };
+    nameBox = { done };
+    inp.addEventListener('keydown', (e) => { e.stopPropagation(); if (e.key === 'Enter') { e.preventDefault(); done(true); } else if (e.key === 'Escape') { e.preventDefault(); done(false); } });
+    inp.addEventListener('blur', () => setTimeout(() => done(true), 0));
+    // tạm ẩn tên cũ trong lúc gõ
+    P.objs[idx] = { ...o }; const tmp = P.objs[idx]; tmp.label = ''; renderInk(); P.objs[idx] = o;
+    setTimeout(() => { inp.focus(); inp.select(); }, 20);
+  }
   const INTER_SEQ = 'IJKHEFGL'.split('');
 
   function usedLabels() { return new Set(page().objs.filter((o) => o.t === 'pt').map((o) => o.label)); }
@@ -959,7 +1170,7 @@ function doPost(e) {
     for (let i = 1; i < 99; i++) for (const c of seq) if (!used.has(c + i)) return c + i;
     return '?';
   }
-  const ptObj = (x, y, label, dot = true, lx = 12, ly = -14) => ({ t: 'pt', x, y, label, dot, lx, ly, color: labelColor(), w: st.width });
+  const ptObj = (x, y, label, dot = true, lx = 22, ly = -25) => ({ t: 'pt', x, y, label, dot, lx, ly, color: labelColor(), w: st.width });
   function labelColor() { return st.color; }
 
   // Tất cả các toạ độ "đỉnh" có thể bắt dính
@@ -1014,19 +1225,19 @@ function doPost(e) {
   function dashFor(c, o) { if (o.dash) c.setLineDash([Math.max(6, o.w * 2.6), Math.max(5, o.w * 2.2)]); }
   function drawLabel(c, o) {
     if (!o.label) return;
-    const fs = 18 + Math.min(8, (o.w || 4) * 1.2);
+    const fs = 2 * (18 + Math.min(8, (o.w || 4) * 1.2)) * (o.ls || 1);   // tên điểm cỡ lớn (gấp 2) × cỡ riêng
     c.font = `italic ${fs}px "Times New Roman", "Cambria Math", serif`;
     c.textAlign = 'center'; c.textBaseline = 'middle';
     const tx = o.x + (o.lx || 0), ty = o.y + (o.ly || 0);
     const light = /^#f|^#e|white/i.test(o.color) && o.color.toLowerCase() !== '#e11d48';
-    c.lineWidth = 4; c.strokeStyle = light ? 'rgba(0,0,0,.55)' : 'rgba(255,255,255,.85)';
+    c.lineWidth = 6; c.strokeStyle = light ? 'rgba(0,0,0,.55)' : 'rgba(255,255,255,.85)';
     c.setLineDash([]); c.strokeText(o.label, tx, ty);
     c.fillStyle = o.color; c.fillText(o.label, tx, ty);
   }
   function drawGeo(c, o) {
     c.strokeStyle = o.color; c.fillStyle = o.color; c.lineWidth = o.w;
     if (o.t === 'pt') {
-      if (o.dot) { c.beginPath(); c.arc(o.x, o.y, Math.max(3, o.w * 0.9), 0, 7); c.fill(); }
+      if (o.dot) { c.fillStyle = o.dotColor || o.color; c.beginPath(); c.arc(o.x, o.y, o.dotColor ? Math.max(4.5, (o.w || 4) * 1.15) : Math.max(3, o.w * 0.9), 0, 7); c.fill(); c.fillStyle = o.color; }
       drawLabel(c, o);
     } else if (o.t === 'arc') {
       dashFor(c, o);
@@ -1064,7 +1275,7 @@ function doPost(e) {
   function hitGeo(o, x, y) {
     if (o.t === 'pt') {
       if (Math.hypot(x - o.x, y - o.y) < 9) return true;
-      return Math.abs(x - (o.x + o.lx)) < 8 + 6 * (o.label || '').length && Math.abs(y - (o.y + o.ly)) < 13;
+      return Math.abs(x - (o.x + o.lx)) < (14 + 12 * (o.label || '').length) * (o.ls || 1) && Math.abs(y - (o.y + o.ly)) < 24 * (o.ls || 1);
     }
     if (o.t === 'arc') {
       let px = o.cx + o.rx * Math.cos(o.a0), py = o.cy + o.ry * Math.sin(o.a0);
@@ -1180,7 +1391,13 @@ function doPost(e) {
     p_luc: { cat: 'p', name: 'Lục giác đều', round: 'hexagon' },
     p_tieptuyen: { cat: 'p', name: 'Tiếp tuyến MA, MB của (O)', round: 'tangent' }
   };
+  const LBL_K = 1.8;   // khoảng cách tên điểm – đỉnh (theo cỡ chữ mới)
   function buildTpl(kind, x1, y1, x2, y2) {
+    const res = buildTpl0(kind, x1, y1, x2, y2);
+    for (const o of res) if (o.t === 'pt') { o.lx = (o.lx || 0) * LBL_K; o.ly = (o.ly || 0) * LBL_K; }
+    return res;
+  }
+  function buildTpl0(kind, x1, y1, x2, y2) {
     const T = TPLS[kind]; if (!T) return [];
     let L = Math.min(x1, x2), Tp = Math.min(y1, y2), Wd = Math.max(40, Math.abs(x2 - x1)), Ht = Math.max(40, Math.abs(y2 - y1));
     if (T.ratio) { // giữ đúng tỉ lệ (hình vuông, tam giác đều)
@@ -1297,10 +1514,21 @@ function doPost(e) {
     }
     if (t === 'point') {
       const s = snap(x, y, e);
-      if (s.kind === 'pt' && P.objs.some((o) => o.t === 'pt' && Math.hypot(o.x - s.x, o.y - s.y) < 0.5)) { toast('Đã có điểm ở đây — bấm đúp vào tên để đổi tên'); return true; }
-      const o = ptObj(s.x, s.y, nextLabel(LABEL_SEQ));
+      const ex = s.kind === 'pt' ? P.objs.findIndex((o) => o.t === 'pt' && Math.hypot(o.x - s.x, o.y - s.y) < 0.5) : -1;
+      if (ex >= 0) {   // đỉnh đã có (ví dụ đỉnh hình mẫu): thêm chấm, đặt / đổi tên
+        const o = P.objs[ex]; snapshot();
+        P.objs[ex] = { ...o, dot: true, dotColor: ptOpt.red ? PT_RED : undefined };
+        renderInk();
+        if (ptOpt.ask) askName(ex, o.label || nextLabel(LABEL_SEQ)); else toast('Đã chấm điểm ' + (o.label || ''));
+        return true;
+      }
+      const o = ptObj(s.x, s.y, ptOpt.ask ? '' : nextLabel(LABEL_SEQ));
+      o.ls = ptOpt.ls; if (ptOpt.red) o.dotColor = PT_RED;
+      o.lx *= ptOpt.ls; o.ly *= ptOpt.ls;
       if (s.kind === 'seg') { const g = s.seg, L = Math.hypot(g[2] - g[0], g[3] - g[1]) || 1; o.dep = { k: 'on', a: [g[0], g[1]], b: [g[2], g[3]], t: Math.hypot(s.x - g[0], s.y - g[1]) / L }; }
-      snapshot(); P.objs.push(o); renderInk(); return true;
+      snapshot(); P.objs.push(o); renderInk();
+      if (ptOpt.ask) askName(P.objs.length - 1, nextLabel(LABEL_SEQ));
+      return true;
     }
     if (t === 'mid') {
       const sg = nearestSeg(x, y, 12); if (!sg) { toast('Bấm vào một đoạn thẳng để lấy trung điểm'); return true; }
@@ -1380,7 +1608,9 @@ function doPost(e) {
     if (drawing && drawing.t === 'tplbox') {
       const [x1, y1, x2, y2] = drawing.p; drawing = null;
       if (Math.abs(x2 - x1) < 20 && Math.abs(y2 - y1) < 20) { renderLive(); toast('Kéo một khung (nhấn giữ và kéo) để đặt hình'); return true; }
-      snapshot(); page().objs.push(...buildTpl(st.tpl, x1, y1, x2, y2)); renderInk(); renderLive(); return true;
+      snapshot(); const n0 = page().objs.length; page().objs.push(...buildTpl(st.tpl, x1, y1, x2, y2)); renderInk();
+      sel = { o: page().objs.slice(n0).map((_, k) => n0 + k), i: [], fresh: true }; renderLive(); updSelBar();
+      toast('Kéo bên trong khung xanh để di chuyển hình · phím mũi tên để nhích · Esc: bỏ chọn'); return true;
     }
     return false;
   }
@@ -1415,14 +1645,23 @@ function doPost(e) {
     c.restore();
   }
   function drawAny(c, o) { if (GEO_TYPES.has(o.t)) { c.save(); drawGeo(c, o); c.restore(); } else drawObj(c, o); }
+  function dotAll(on) {
+    const P = page(); let n = 0;
+    snapshot();
+    P.objs = P.objs.map((o) => { if (o.t !== 'pt' || /^[xyz]$/.test(o.label || '')) return o; n++; return { ...o, dot: on, dotColor: on ? PT_RED : undefined }; });
+    renderInk(); toast(on ? `Đã chấm đỏ ${n} điểm` : 'Đã bỏ chấm ở các đỉnh');
+  }
+  function scaleLabels(k) {
+    const P = page(); snapshot();
+    P.objs = P.objs.map((o) => (o.t === 'pt' ? { ...o, ls: Math.min(3, (o.ls || 1) * k), lx: (o.lx || 0) * k, ly: (o.ly || 0) * k } : o));
+    renderInk(); toast('Đã phóng to tên điểm');
+  }
   function renameAt(x, y) {
     const P = page();
     for (let i = P.objs.length - 1; i >= 0; i--) {
       const o = P.objs[i];
       if (o.t === 'pt' && hitGeo(o, x, y)) {
-        const v = window.prompt('Tên điểm (để trống nếu không cần tên):', o.label || '');
-        if (v === null) return true;
-        snapshot(); P.objs[i] = { ...o, label: v.trim().slice(0, 6) }; renderInk(); return true;
+        snapshot(); askName(i, o.label || ''); return true;
       }
     }
     return false;
@@ -1799,7 +2038,12 @@ function doPost(e) {
   // chuột / bút với công cụ Chọn
   function selDown(e, x, y) {
     lastPtr = [x, y];
-    if (st.tool !== 'select') return false;
+    if (st.tool !== 'select') {
+      // hình vừa chèn đang được chọn: bấm trong khung xanh để kéo đi, bấm ra ngoài thì vẽ tiếp như thường
+      if (sel && sel.fresh && inBox(selBox(), x, y, 10)) { selDrag = { move: true, sx: x, sy: y, moved: false }; return true; }
+      if (sel && sel.fresh) { sel = null; updSelBar(); }
+      return false;
+    }
     const b = selBox();
     if (b && inBox(b, x, y) && !e.shiftKey) { selDrag = { move: true, sx: x, sy: y, moved: false }; return true; }
     const h = hitAt(x, y);
@@ -1818,7 +2062,7 @@ function doPost(e) {
   }
   function selMove(e, x, y) {
     lastPtr = [x, y];
-    if (!selDrag || st.tool !== 'select') return false;
+    if (!selDrag) return false;
     if (selDrag.band) {
       selDrag.band = { x: Math.min(x, selDrag.sx), y: Math.min(y, selDrag.sy), w: Math.abs(x - selDrag.sx), h: Math.abs(y - selDrag.sy) };
       renderLive(); return true;
@@ -1840,7 +2084,7 @@ function doPost(e) {
     return true;
   }
   function selUp() {
-    if (!selDrag || st.tool !== 'select') return false;
+    if (!selDrag) return false;
     const d = selDrag; selDrag = null;
     if (d.band) {
       const r = d.band;
@@ -1890,6 +2134,17 @@ function doPost(e) {
     if (clip) { e.preventDefault(); e.stopPropagation(); pasteClip(clip); return true; }
     return false;
   }
+  // chuột phải trong vùng đang chọn: đổi nét đứt cho tất cả các đường được chọn
+  setTimeout(() => { boxHook = (x, y) => hasSel() && inBox(selBox(), x, y, 6); }, 0);
+  setTimeout(() => { nameHook = () => { if (sel) { sel = null; selDrag = null; updSelBar(); renderLive(); } }; }, 0);
+  setTimeout(() => { ctxHook = (x, y) => {
+    if (!hasSel() || !inBox(selBox(), x, y)) return false;
+    const P = page(), ks = sel.o.filter((k) => P.objs[k] && ['line', 'arrow', 'rect', 'ellipse', 'pen', 'arc'].includes(P.objs[k].t));
+    if (!ks.length) return false;
+    const dash = !ks.every((k) => P.objs[k].dash);
+    snapshot(); ks.forEach((k) => { P.objs[k] = { ...P.objs[k], dash }; }); renderInk(); renderLive();
+    toast(`Đã chuyển ${ks.length} đường thành ${dash ? 'nét đứt' : 'nét liền'}`); return true;
+  }; }, 0);
   window.addEventListener('pointermove', (e) => { if (st.visible) lastPtr = [e.clientX, e.clientY]; }, { passive: true, capture: true });
 
   /* ---------------- vẽ bằng con trỏ ---------------- */
@@ -1926,6 +2181,16 @@ function doPost(e) {
     const x = e.clientX, y = e.clientY, t = st.tool;
     liveCv.setPointerCapture(e.pointerId);
     if (t === 'eraser') { erasedThisDrag = false; eraseAt(x, y); drawing = { t: 'erasing' }; return; }
+    if (t === 'point' || (t === 'select' && !(boxHook && boxHook(x, y)))) {
+      // công cụ Điểm / Chọn: nhấn vào TÊN điểm rồi kéo để đặt tên chỗ khác · bấm (không kéo) để đổi tên
+      const P = page();
+      for (let i = P.objs.length - 1; i >= 0; i--) {
+        const o = P.objs[i];
+        if (o.t !== 'pt' || !o.label || Math.hypot(x - o.x, y - o.y) < 10 || !hitGeo(o, x, y)) continue;
+        dragPt = { idx: i, label: true, pending: true, sx: x, sy: y, lx: o.lx || 0, ly: o.ly || 0 };
+        return;
+      }
+    }
     if (t === 'move') {
       // kéo đỉnh (kéo theo cạnh) hoặc kéo tên điểm
       const P = page();
@@ -1963,7 +2228,8 @@ function doPost(e) {
     if (GEO_TOOLS.includes(t) && geoDown(e, x, y)) return;
     if (t === 'tex') { openTex(x, y); return; }
     if (t === 'laser') { laser = [[x, y, performance.now()]]; if (!laserRaf) laserRaf = requestAnimationFrame(laserLoop); drawing = { t: 'laser' }; return; }
-    if (t === 'pen' || t === 'hl') drawing = { t, color: st.color, w: st.width, pts: [[x, y]] };
+    if (t === 'nib') drawing = { t: 'pen', nib: 1, color: st.color, w: st.width, pts: [[x, y]], pr: [e.pointerType === 'mouse' ? 0.5 : (e.pressure || 0.5)] };
+    else if (t === 'pen' || t === 'hl') drawing = { t, color: st.color, w: st.width, pts: [[x, y]] };
     else if (t === 'line' || t === 'arrow') { const s = snap(x, y, e); drawing = { t, color: st.color, w: st.width, p: [s.x, s.y, s.x, s.y] }; }
     else drawing = { t, color: st.color, w: st.width, p: [x, y, x, y] };
     renderLive();
@@ -1980,6 +2246,11 @@ function doPost(e) {
     }
     if (dragPt) {
       const d = dragPt, dx = x - d.sx, dy = y - d.sy;
+      if (d.pending) {
+        if (Math.hypot(dx, dy) < 4) return;
+        snapshot(); const P = page(); P.objs = P.objs.map((q) => JSON.parse(JSON.stringify(q)));
+        d.o = P.objs[d.idx]; d.pending = false; if (!d.o) { dragPt = null; return; }
+      }
       if (d.label) { d.o.lx = d.lx + dx; d.o.ly = d.ly + dy; }
       else {
         let nx = d.cx + dx, ny = d.cy + dy;
@@ -2011,7 +2282,7 @@ function doPost(e) {
     if (drawing.t === 'laser') { laser.push([x, y, performance.now()]); return; }
     if (drawing.pts) {
       const evs = e.getCoalescedEvents ? e.getCoalescedEvents() : [e];
-      for (const ev of evs) drawing.pts.push([ev.clientX, ev.clientY]);
+      for (const ev of evs) { drawing.pts.push([ev.clientX, ev.clientY]); if (drawing.pr) drawing.pr.push(ev.pointerType === 'mouse' ? 0.5 : (ev.pressure || 0.5)); }
     } else {
       let [x2, y2] = [x, y];
       if (e.shiftKey) {
@@ -2024,7 +2295,7 @@ function doPost(e) {
   });
   const endDraw = () => {
     if (dragItem) { dragItem = null; return; }
-    if (dragPt) { dragPt = null; return; }
+    if (dragPt) { const d = dragPt; dragPt = null; if (d.pending) askName(d.idx); else if (d.idx != null) toast('Đã dời tên điểm'); return; }
     if (selUp()) return;
     if (compassUp()) return;
     if (geoUp()) return;
@@ -2038,6 +2309,26 @@ function doPost(e) {
     drawing = null; renderLive();
   };
   liveCv.addEventListener('pointerup', endDraw);
+  // Chuột phải vào một đường: đổi nét liền ↔ nét đứt (cạnh khuất)
+  let ctxHook = null;
+  let boxHook = null;    // bản HTML: bấm trong khung đang chọn thì kéo cả vùng, không kéo tên
+  let nameHook = null;   // bản HTML: bỏ khung chọn khi đặt tên điểm
+  const DASHABLE = new Set(['line', 'arrow', 'rect', 'ellipse', 'pen', 'arc']);
+  liveCv.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+    if (geo.sel.length || geo.face.length || drawing) return;
+    const x = e.clientX, y = e.clientY;
+    if (ctxHook && ctxHook(x, y)) return;
+    const P = page();
+    for (let k = P.objs.length - 1; k >= 0; k--) {
+      const o = P.objs[k];
+      if (!DASHABLE.has(o.t) || !hitObj(o, x, y, 9)) continue;
+      snapshot(); P.objs[k] = { ...o, dash: !o.dash }; renderInk();
+      toast(P.objs[k].dash ? 'Đã chuyển thành nét đứt (chuột phải lần nữa: nét liền)' : 'Đã chuyển thành nét liền');
+      return;
+    }
+    toast('Chuột phải đúng vào một đường để đổi nét liền ↔ nét đứt');
+  });
   liveCv.addEventListener('pointercancel', endDraw);
   liveCv.addEventListener('dblclick', (e) => {
     if (st.tool === 'face' && geo.face.length >= 3) { geo.face.pop(); closeFace(); return; }
@@ -2475,6 +2766,55 @@ function doPost(e) {
       return full(dropdown(main, menu));
     }
 
+    // Nhóm Điểm: icon riêng — đặt điểm chấm đỏ, đặt tên, cỡ chữ, chấm cả hình
+    function ptGroup() {
+      const main = mk('button', { className: 'b', title: 'Điểm chấm đỏ & tên điểm (I) — bấm lại để mở tuỳ chọn ▾' },
+        svg('<circle cx="8" cy="16" r="3.6" fill="#dc2626" stroke="#dc2626"/><path d="M13 11l3.5-8 3.5 8M14.2 8.3h4.6"/>') + '<i class="caret"></i>');
+      main.dataset.ptmain = '1';
+      const menu = mk('div', { className: 'menu tools geo' });
+      menu.append(mk('div', { className: 'mh', textContent: 'Điểm — chấm đỏ & tên điểm' }));
+      menu.append(toolItem('point'));
+      const ptRow = (cls, label, fn) => { const b = mk('button', { className: 'mi ' + cls }, `<span>${label}</span>`); b.onclick = (e) => { e.stopPropagation(); fn(b); }; menu.append(b); return b; };
+      const rRed = ptRow('pt-red' + (ptOpt.red ? ' on' : ''), '🔴 Chấm đỏ ở điểm', (b) => { ptOpt.red = !ptOpt.red; b.classList.toggle('on', ptOpt.red); savePtOpt(); });
+      const rAsk = ptRow('pt-ask' + (ptOpt.ask ? ' on' : ''), '✏️ Hỏi tên khi đặt điểm', (b) => { ptOpt.ask = !ptOpt.ask; b.classList.toggle('on', ptOpt.ask); savePtOpt(); });
+      const lsRow = mk('div', { className: 'row-c' }, '<span style="font-size:12px;color:#9aa3c7;padding:0 6px">Cỡ tên:</span>');
+      [[1, 'Vừa'], [1.2, 'Lớn'], [1.5, 'Rất lớn']].forEach(([v, n]) => { const b = mk('button', { className: 'chip' + (ptOpt.ls === v ? ' on' : ''), textContent: n }); b.style.cssText = 'width:auto;padding:4px 9px;border-radius:7px;display:inline-block'; b.onclick = (e) => { e.stopPropagation(); ptOpt.ls = v; savePtOpt(); lsRow.querySelectorAll('button').forEach((x) => x.classList.toggle('on', x === b)); }; lsRow.append(b); });
+      menu.append(lsRow);
+      ptRow('', '🔴 Chấm đỏ tất cả đỉnh trên trang', () => { dotAll(true); closeMenus(); });
+      ptRow('', '⚪ Bỏ chấm ở các đỉnh', () => { dotAll(false); closeMenus(); });
+      ptRow('', '🔠 Phóng to tên điểm đã có (×1.2)', () => { scaleLabels(1.2); closeMenus(); });
+      ptRow('', '✋ Kéo tên điểm sang chỗ khác', () => { closeMenus(); setTool('point'); toast('Nhấn vào tên điểm rồi kéo tới chỗ muốn đặt'); });
+      ptRow('', '⬚ Chọn vùng để di chuyển hình', () => { closeMenus(); setTool('select'); toast('Kéo khung quanh phần hình cần di chuyển, rồi kéo bên trong khung xanh'); });
+      menu.append(mk('div', { className: 'ghint', innerHTML: 'Bấm vào đỉnh có sẵn → chấm đỏ + gõ tên (Enter giữ, Esc bỏ tên). Bấm lên cạnh → điểm thuộc cạnh. <b>Nhấn vào tên điểm rồi kéo</b> để đặt tên chỗ khác; bấm vào tên (không kéo) để đổi tên.' }));
+      main.onclick = (e) => { e.stopPropagation(); if (st.tool === 'point') toggleMenu(menu); else setTool('point'); };
+      main.oncontextmenu = (e) => { e.preventDefault(); toggleMenu(menu); };
+      return full(dropdown(main, menu));
+    }
+
+    // Nhóm Chọn vùng: icon riêng — kéo khung chọn phần hình rồi kéo đi chỗ khác
+    function selGroup() {
+      const main = mk('button', { className: 'b', title: 'Chọn vùng để di chuyển hình (S) — bấm lại để mở menu ▾' },
+        svg('<rect x="3" y="3" width="12" height="12" rx="1" stroke-dasharray="3 2.5"/><path d="M18 12.5v9M13.5 17h9M16.4 14.1l1.6-1.6 1.6 1.6M16.4 19.9l1.6 1.6 1.6-1.6M15.1 15.4l-1.6 1.6 1.6 1.6M20.9 15.4l1.6 1.6-1.6 1.6"/>') + '<i class="caret"></i>');
+      main.dataset.selmain = '1';
+      const menu = mk('div', { className: 'menu tools geo' });
+      menu.append(mk('div', { className: 'mh', textContent: 'Chọn vùng & di chuyển hình' }));
+      const row = (label, kbd, fn) => { const b = mk('button', { className: 'mi' }, `<span>${label}</span>` + (kbd ? `<kbd>${kbd}</kbd>` : '')); b.onclick = (e) => { e.stopPropagation(); closeMenus(); fn(); }; menu.append(b); return b; };
+      const need = () => { if (hasSel()) return true; toast('Chưa chọn gì — kéo khung quanh phần hình trước'); return false; };
+      const P = () => page();
+      row('⬚ Kéo khung chọn vùng', 'S', () => { setTool('select'); toast('Kéo khung quanh phần hình cần di chuyển, rồi kéo bên trong khung xanh'); });
+      row('📐 Chọn tất cả hình vẽ (không lấy chữ)', '', () => { setTool('select'); setSel({ o: P().objs.map((_, i) => i), i: [] }); if (sel) toast('Đã chọn cả hình — kéo bên trong khung xanh để di chuyển'); else toast('Trang chưa có hình vẽ'); });
+      row('▣ Chọn cả trang (hình + chữ)', 'Ctrl+A', () => { setTool('select'); setSel({ o: P().objs.map((_, i) => i), i: P().items.map((_, i) => i) }); if (!sel) toast('Trang đang trống'); });
+      row('✋ Kéo tên điểm sang chỗ khác', '', () => { setTool('point'); toast('Nhấn vào tên điểm rồi kéo tới chỗ muốn đặt'); });
+      menu.append(mk('div', { className: 'msep' }));
+      row('⧉ Nhân bản vùng chọn', 'Ctrl+D', () => { if (need()) dupSel(); });
+      row('🗑 Xoá vùng chọn', 'Delete', () => { if (need()) delSel(); });
+      row('✖ Bỏ chọn', 'Esc', () => setSel(null));
+      menu.append(mk('div', { className: 'ghint', innerHTML: 'Kéo khung quanh phần hình → kéo <b>bên trong khung xanh</b> để di chuyển. Phím mũi tên nhích 1px (Shift: 10px). Giữ Shift khi bấm để thêm/bớt nét. Chuột phải trong khung: đổi nét đứt.' }));
+      main.onclick = (e) => { e.stopPropagation(); if (st.tool === 'select') toggleMenu(menu); else { setTool('select'); toast('Kéo khung quanh phần hình cần di chuyển · bấm lại nút để mở menu'); } };
+      main.oncontextmenu = (e) => { e.preventDefault(); toggleMenu(menu); };
+      return full(dropdown(main, menu));
+    }
+
     // Nhóm Hình học phẳng: hình mẫu phẳng + công cụ dựng hình phẳng
     function planeGroup() {
       const main = mk('button', { className: 'b', title: 'Hình học phẳng ▾ — tam giác, tứ giác, đường tròn' },
@@ -2526,12 +2866,14 @@ function doPost(e) {
 
     // ---- công cụ vẽ (đã nhóm)
     if (!st.board) { const c = btn(tdef('cursor')[2], tdef('cursor')[3], () => setTool('cursor')); c.dataset.tool = 'cursor'; full(c); }
-    toolGroup('pen', 'Bút', ['pen', 'hl', 'laser']);
+    toolGroup('pen', 'Bút', ['pen', 'nib', 'hl', 'laser']);
     toolGroup('shape', 'Hình', ['line', 'arrow', 'rect', 'ellipse']);
     { const t = btn(tdef('tex')[2], tdef('tex')[3], () => setTool('tex')); t.dataset.tool = 'tex'; full(t); }
-    toolGroup('edit', 'Chọn · tẩy · di chuyển', ['select', 'eraser', 'move']);
+    toolGroup('edit', 'Tẩy · di chuyển', ['eraser', 'move']);
     planeGroup();
     geoGroup();
+    ptGroup();
+    selGroup();
     insGroup();
     sep();
 
@@ -2722,7 +3064,9 @@ function doPost(e) {
     bar.querySelectorAll('[data-tpl]').forEach((b) => b.classList.toggle('on', st.tool === 'tpl' && b.dataset.tpl === st.tpl));
     const isPlane = st.tool === 'tpl' && TPLS[st.tpl] && TPLS[st.tpl].cat === 'p';
     const pb = bar.querySelector('[data-plane]'); if (pb) pb.classList.toggle('on', isPlane);
-    const gb = bar.querySelector('[data-group=geo]'); if (gb && isPlane) gb.classList.remove('on');
+    const gb = bar.querySelector('[data-group=geo]'); if (gb && (isPlane || st.tool === 'point')) gb.classList.remove('on');
+    const smb = bar.querySelector('[data-selmain]'); if (smb) smb.classList.toggle('on', st.tool === 'select');
+    const ptb = bar.querySelector('[data-ptmain]'); if (ptb) ptb.classList.toggle('on', st.tool === 'point');
     const snb = bar.querySelector('.snapt'); if (snb) snb.classList.toggle('on', !!st.snap);
     const q = (s, v) => { const el = bar.querySelector(s); if (el) el.classList.toggle('on', !!v); };
     q('.ins-ruler', st.ruler); q('.ins-prot', st.prot); q('.ins-slide', st.slideMode);
@@ -2743,7 +3087,7 @@ function doPost(e) {
   }
   function setTool(t) {
     if (t !== 'select') { sel = null; selDrag = null; }
-    setTimeout(updSelBar, 0);
+    setTimeout(() => { updSelBar(); renderLive(); }, 0);
     if (t !== 'tex' && dlg.classList.contains('open')) commitTex();
     if (t !== 'compass') cmp = null;
     st.tool = t; selItem = null;
@@ -2880,6 +3224,7 @@ function doPost(e) {
   const NEXT_KEYS = new Set(['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter', 'n', 'N']);
   const PREV_KEYS = new Set(['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace', 'p', 'P']);
   function onKey(e) {
+    if ((e.key === 'o' || e.key === 'O') && !e.ctrlKey && !e.metaKey && !e.altKey && !isTyping(e)) { try { if (window.parent !== window && window.parent.qwKey && window.parent.qwKey()) { e.preventDefault(); e.stopPropagation(); return; } } catch (err) {} }
     if (!st.visible || dlg.classList.contains('open')) return;
     if (!isTyping(e) && selKey(e)) { e.preventDefault(); e.stopPropagation(); return; }
     // chế độ theo slide: phím chuyển slide vẫn tới trang chiếu, đồng thời đổi trang nét vẽ
@@ -2981,6 +3326,7 @@ function doPost(e) {
     },
     toast,
     slide: (dir) => slide(dir),
+    addText(src, x, y, size) { ensureMounted(); snapshot(); page().items.push({ t: 'tex', src, x, y, size: size || 26, color: st.color === '#ffffff' && page().bg !== 'green' ? '#111827' : st.color }); renderItems(); },
     timer: (sec) => (sec ? startTimer(sec) : stopTimer()),
     // ---- dùng cho ứng dụng HTML "Bảng dạy học trực quan": mỗi thẻ có bộ trang nét vẽ riêng
     show: (tool) => { show(tool || 'cursor'); return true; },
@@ -3255,6 +3601,7 @@ function doPost(e) {
   }
   function openFiles(list) {
     for (const f of list) {
+      if (/\.(md|markdown)$/i.test(f.name)) { f.text().then((t) => loadQs(t, 0)); continue; }
       const type = fileType(f);
       if (!type) { toast('Chưa mở được loại file: ' + f.name); continue; }
       addTab({ type, title: f.name.replace(/\.[^.]+$/, '').slice(0, 40), blob: URL.createObjectURL(f), file: f, mime: f.type || (type === 'pdf' ? 'application/pdf' : 'text/html') }, true);
@@ -3283,7 +3630,7 @@ function doPost(e) {
       }
       out.push(o);
     }
-    return { app: 'bang-day-hoc', v: 1, saved: new Date().toISOString(), cur: tabs.indexOf(cur), tabs: out };
+    return { app: 'bang-day-hoc', v: 1, saved: new Date().toISOString(), cur: tabs.indexOf(cur), tabs: out, questions: qs ? { md: qs.md, idx: qs.idx } : null };
   }
   let saveT = 0;
   function save() { clearTimeout(saveT); saveT = setTimeout(saveNow, 800); }
@@ -3314,6 +3661,7 @@ function doPost(e) {
       tabs.push(t);
     }
     if (!tabs.length) tabs.push(mkTab({ type: 'start', title: 'Trang đầu' }));
+    if (s.questions && s.questions.md && typeof loadQs === 'function') setTimeout(() => loadQs(s.questions.md, s.questions.idx || 0, true), 50);
     const first = tabs[Math.max(0, Math.min(s.cur || 0, tabs.length - 1))];
     const keep = first.ink; A.swap(keep); first.ink = null; cur = first;
     buildPane(first); first.pane.classList.add('on'); A.show(first.type === 'board' ? 'pen' : 'cursor');
@@ -3477,7 +3825,7 @@ function doPost(e) {
     el.className = 'sync' + (st === 'ok' ? ' ok' : st === 'err' ? ' err' : '');
     const pend = lib.queue.length ? ` · ${lib.queue.length} thay đổi chờ gửi` : '';
     const txt = { local: '💾 Chỉ lưu trên máy này — bấm ⚙ để nối Google Sheet', ok: '☁ Đã đồng bộ Google Sheet', busy: '⏳ Đang đồng bộ…', err: '⚠ ' + syncMsg }[st] + (st !== 'local' ? pend : '');
-    el.innerHTML = esc(txt) + (gas ? '<a id="libSyncBtn">Đồng bộ lại</a>' : '');
+    el.innerHTML = esc(txt) + (gas && gasVer && gasVer < 3 && st === 'ok' ? ' · <b>mã Apps Script cũ: nhóm chỉ lưu trên máy này — cập nhật mã ở ⚙</b>' : '') + (gas ? '<a id="libSyncBtn">Đồng bộ lại</a>' : '');
     const b = $('#libSyncBtn'); if (b) b.onclick = () => sync(true);
   }
   async function gasCall(body) {
@@ -3486,8 +3834,10 @@ function doPost(e) {
   }
   async function gasList(url, key) {
     const r = await fetch(url + (url.includes('?') ? '&' : '?') + 'key=' + encodeURIComponent(key) + '&t=' + Date.now(), { redirect: 'follow' });
-    const j = await r.json(); if (!j.ok) throw new Error(j.error || 'Lỗi Apps Script'); return j.rows;
+    const j = await r.json(); if (!j.ok) throw new Error(j.error || 'Lỗi Apps Script'); gasVer = j.v || 1; return j.rows;
   }
+  let gasVer = 0;
+  function keepGroups(rows) { const old = new Map(lib.rows.map((r) => [r.id, r])); for (const r of rows) if (!('group' in r) && old.has(r.id)) r.group = old.get(r.id).group || ''; return rows; }
   function push(op) { lib.queue.push(op); saveLib(); if (gas) flush(); else setSync('local'); }
   let flushing = null;
   async function flush() {
@@ -3510,7 +3860,7 @@ function doPost(e) {
     if (lib.queue.length) return;            // còn thay đổi chưa gửi → giữ bản trên máy
     setSync('busy');
     try {
-      const rows = await gasList(gas.url, gas.key);
+      const rows = keepGroups(await gasList(gas.url, gas.key));
       lib.rows = rows; saveLib(); setSync('ok'); renderLib();
       if (loud) toast('Đã tải ' + rows.length + ' link từ Google Sheet');
     } catch (e) { setSync('err', 'Không đọc được Sheet (' + e.message + ')'); }
@@ -3518,68 +3868,184 @@ function doPost(e) {
   setInterval(() => { if (gas && lib.queue.length) flush(); }, 30000);
   addEventListener('online', () => gas && sync());
 
-  /* --- danh sách --- */
-  function allTags() {
+  /* --- nhóm link --- */
+  const GROUP_DEF = [
+    ['Dạy học', '📚', 'Bài giảng, slide, phiếu học tập, tài liệu bài học'],
+    ['Phần mềm Toán', '📐', 'GeoGebra, Desmos, PhET, mô phỏng'],
+    ['Video', '🎬', 'YouTube, video bài giảng'],
+    ['Đề thi – Bài tập', '📝', 'Đề kiểm tra, bài tập, trắc nghiệm, game ôn tập'],
+    ['Công cụ', '🧰', 'Soạn bài, AI, vẽ hình, chuyển đổi file'],
+    ['Tiện ích', '⚙️', 'Đồng hồ, gọi tên ngẫu nhiên, nhạc, trò chơi lớp học'],
+    ['Tra cứu', '🔎', 'SGK, từ điển, văn bản, chương trình'],
+    ['Khác', '📁', '']
+  ];
+  const NOGROUP = '';
+  let customGroups = lget('bangDayHoc.groups', []);       // [{ name, icon }]
+  function groupsAll() {
+    const m = new Map(GROUP_DEF.map(([n, i, d]) => [n, { name: n, icon: i, desc: d }]));
+    for (const g of customGroups) if (!m.has(g.name)) m.set(g.name, { name: g.name, icon: g.icon || '🏷', desc: '' });
+    for (const r of lib.rows) if (r.group && !m.has(r.group)) m.set(r.group, { name: r.group, icon: '🏷', desc: '' });
+    return [...m.values()];
+  }
+  const gIcon = (n) => (n ? (groupsAll().find((g) => g.name === n) || { icon: '🏷' }).icon : '📥');
+  const gLabel = (n) => n || 'Chưa xếp nhóm';
+  function autoGroup(u) {
+    const k = kindOf(u || '');
+    if (k === 'youtube') return 'Video';
+    if (k === 'geogebra' || k === 'desmos' || k === 'phet') return 'Phần mềm Toán';
+    if (k === 'slides' || k === 'docs' || k === 'drive' || k === 'board') return 'Dạy học';
+    return '';
+  }
+
+  /* --- danh sách: lọc theo nhóm, tag, tìm kiếm, sắp xếp --- */
+  let curGroup = lget('bangDayHoc.libGroup', '*');      // '*' = tất cả
+  let libSort = lget('bangDayHoc.libSort', 'recent');
+  let collapsed = new Set(lget('bangDayHoc.libCollapsed', []));
+  let hiIdx = -1, shown = [];
+  function allTags(rows) {
     const m = new Map();
-    for (const r of lib.rows) for (const t of r.tags || []) m.set(t, (m.get(t) || 0) + 1);
+    for (const r of rows || lib.rows) for (const t of r.tags || []) m.set(t, (m.get(t) || 0) + 1);
     return [...m.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'vi'));
   }
   const fold = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd');
+  const inGroup = (r) => curGroup === '*' || (r.group || NOGROUP) === curGroup;
+  const SORTS = {
+    recent: (a, b) => (b.last || b.time || '').localeCompare(a.last || a.time || ''),
+    most: (a, b) => (b.opens || 0) - (a.opens || 0) || SORTS.recent(a, b),
+    newest: (a, b) => (b.time || '').localeCompare(a.time || ''),
+    az: (a, b) => a.title.localeCompare(b.title, 'vi')
+  };
   function filtered() {
     const q = fold($('#libQ').value).split(/\s+/).filter(Boolean);
-    return lib.rows.filter((r) => {
+    const out = lib.rows.filter((r) => {
+      if (!inGroup(r)) return false;
       for (const t of filt) if (!(r.tags || []).includes(t)) return false;
-      const hay = fold([r.title, r.url, r.note, (r.tags || []).join(' ')].join(' '));
+      const hay = fold([r.title, r.url, r.note, r.group, (r.tags || []).join(' ')].join(' '));
       return q.every((w) => hay.includes(w));
-    }).sort((a, b) => (b.last || b.time || '').localeCompare(a.last || a.time || ''));
+    }).sort(SORTS[libSort] || SORTS.recent);
+    // gõ nhiều chữ: link chứa đúng cụm từ (trong tên trước) lên đầu
+    if (q.length > 1) {
+      const ph = q.join(' '), score = (r) => (fold(r.title).includes(ph) ? 2 : fold([r.note, (r.tags || []).join(' ')].join(' ')).includes(ph) ? 1 : 0);
+      return out.map((r, i) => [r, i]).sort((a, b) => score(b[0]) - score(a[0]) || a[1] - b[1]).map((x) => x[0]);
+    }
+    return out;
   }
+  function card(r, showGroup) {
+    const k = kindOf(r.url), d = document.createElement('div'); d.className = 'it';
+    const when = r.last ? new Date(r.last) : r.time ? new Date(r.time) : null;
+    d.innerHTML = `<div class="t"><span>${TYPE_ICON[k] || '🌐'} ${esc(r.title)}</span>
+        <div class="acts"><button data-a="edit" title="Sửa nhóm / tag / ghi chú">✎</button><button data-a="del" title="Xoá khỏi thư viện">🗑</button></div></div>
+      <div class="u">${esc(/^(ggb|board):/.test(r.url) ? (k === 'board' ? 'Bảng ' + (BOARD_NAME[r.url.slice(6)] || '') : 'GeoGebra ' + r.url.slice(4)) : host(r.url) + ' — ' + r.url)}</div>
+      ${r.note ? `<div class="n">${esc(r.note)}</div>` : ''}
+      <div class="row">${showGroup ? `<span class="gb" data-g="${esc(r.group || NOGROUP)}">${gIcon(r.group)} ${esc(gLabel(r.group))}</span>` : ''}${(r.tags || []).map((t) => `<span class="tg${filt.has(t) ? ' on' : ''}" data-tag="${esc(t)}">${esc(t)}</span>`).join('')}
+        <span class="m">${r.opens ? r.opens + ' lần mở · ' : ''}${when && !isNaN(when) ? when.toLocaleDateString('vi-VN') : ''}</span></div>`;
+    d.onclick = (e) => {
+      const a = e.target.closest('[data-a]'), tag = e.target.closest('[data-tag]'), g = e.target.closest('[data-g]');
+      if (a && a.dataset.a === 'edit') return editRow(r);
+      if (a && a.dataset.a === 'del') { if (confirm('Xoá "' + r.title + '" khỏi thư viện?')) { lib.rows = lib.rows.filter((x) => x !== r); push({ action: 'delete', id: r.id }); saveLib(); renderLib(); } return; }
+      if (tag) { const t = tag.dataset.tag; filt.has(t) ? filt.delete(t) : filt.add(t); return renderLib(); }
+      if (g) { setGroup(g.dataset.g); return; }
+      openRow(r);
+    };
+    shown.push({ r, el: d });
+    return d;
+  }
+  function setGroup(g) { curGroup = g; lset('bangDayHoc.libGroup', g); filt.clear(); hiIdx = -1; renderLib(); }
   function renderLib() {
     if (!libEl.classList.contains('open')) return;
+    // thanh nhóm
+    const counts = new Map(); for (const r of lib.rows) counts.set(r.group || NOGROUP, (counts.get(r.group || NOGROUP) || 0) + 1);
+    const gb = $('#libGroups'); gb.innerHTML = '';
+    const chip = (key, icon, label, n, title) => {
+      const b = document.createElement('button'); b.className = 'gc' + (curGroup === key ? ' on' : ''); b.title = title || '';
+      b.innerHTML = `<span>${icon}</span>${esc(label)}<small>${n}</small>`; b.onclick = () => setGroup(key); gb.append(b);
+    };
+    chip('*', '🗂', 'Tất cả', lib.rows.length, 'Tất cả link');
+    for (const g of groupsAll()) if (counts.get(g.name) || curGroup === g.name) chip(g.name, g.icon, g.name, counts.get(g.name) || 0, g.desc);
+    if (counts.get(NOGROUP)) chip(NOGROUP, '📥', 'Chưa xếp nhóm', counts.get(NOGROUP), 'Link chưa chọn nhóm — bấm ✎ để xếp');
+    // tag của nhóm đang xem
     const tg = $('#libTags'); tg.innerHTML = '';
-    for (const [t, n] of allTags()) {
+    const tagsHere = allTags(lib.rows.filter(inGroup));
+    $('#libTagBtn').innerHTML = `🏷 Tag (${tagsHere.length})${filt.size ? ' · đang lọc ' + filt.size : ''}`;
+    for (const [t, n] of tagsHere) {
       const b = document.createElement('span'); b.className = 'tg' + (filt.has(t) ? ' on' : '');
       b.innerHTML = `${esc(t)} <small>${n}</small>`; b.onclick = () => { filt.has(t) ? filt.delete(t) : filt.add(t); renderLib(); };
       tg.append(b);
     }
-    const list = $('#libList'), rows = filtered();
+    tg.hidden = !tagsHere.length || !(lget('bangDayHoc.libTagsOpen', true) || filt.size);
+    // danh sách
+    const list = $('#libList'), rows = filtered(); shown = [];
     $('#libOpenAll').textContent = `▶ Mở cả bộ (${rows.length})`;
     $('#libOpenAll').disabled = !rows.length;
-    if (!lib.rows.length) { list.innerHTML = '<div class="empty">Chưa có link nào.<br>Mở một trang web / GeoGebra / bảng → bấm <b>⭐ Lưu thẻ đang mở</b>.<br>Gắn tag theo <b>Lớp · Chương · Bài</b> để tiết sau mở lại cả bộ trong 1 cú bấm.</div>'; return; }
-    if (!rows.length) { list.innerHTML = '<div class="empty">Không có link khớp bộ lọc.</div>'; return; }
     list.innerHTML = '';
-    for (const r of rows) {
-      const k = kindOf(r.url), d = document.createElement('div'); d.className = 'it';
-      const when = r.last ? new Date(r.last) : r.time ? new Date(r.time) : null;
-      d.innerHTML = `<div class="t"><span>${TYPE_ICON[k] || '🌐'} ${esc(r.title)}</span>
-          <div class="acts"><button data-a="edit" title="Sửa tag / ghi chú">✎</button><button data-a="del" title="Xoá khỏi thư viện">🗑</button></div></div>
-        <div class="u">${esc(/^(ggb|board):/.test(r.url) ? (k === 'board' ? 'Bảng ' + (BOARD_NAME[r.url.slice(6)] || '') : 'GeoGebra ' + r.url.slice(4)) : host(r.url) + ' — ' + r.url)}</div>
-        ${r.note ? `<div class="n">${esc(r.note)}</div>` : ''}
-        <div class="row">${(r.tags || []).map((t) => `<span class="tg${filt.has(t) ? ' on' : ''}" data-tag="${esc(t)}">${esc(t)}</span>`).join('')}
-          <span class="m">${r.opens ? r.opens + ' lần mở · ' : ''}${when && !isNaN(when) ? when.toLocaleDateString('vi-VN') : ''}</span></div>`;
-      d.onclick = (e) => {
-        const a = e.target.closest('[data-a]'), tag = e.target.closest('[data-tag]');
-        if (a && a.dataset.a === 'edit') return editRow(r);
-        if (a && a.dataset.a === 'del') { if (confirm('Xoá "' + r.title + '" khỏi thư viện?')) { lib.rows = lib.rows.filter((x) => x !== r); push({ action: 'delete', id: r.id }); saveLib(); renderLib(); } return; }
-        if (tag) { const t = tag.dataset.tag; filt.has(t) ? filt.delete(t) : filt.add(t); return renderLib(); }
-        openRow(r);
-      };
-      list.append(d);
+    if (!lib.rows.length) { list.innerHTML = '<div class="empty">Chưa có link nào.<br>Mở một trang web / GeoGebra / bảng → bấm <b>⭐ Lưu thẻ đang mở</b>,<br>chọn <b>nhóm</b> (Dạy học, Công cụ, Tiện ích…) và gắn <b>tag</b> Lớp · Chương · Bài.</div>'; return; }
+    if (!rows.length) { list.innerHTML = '<div class="empty">Không có link khớp bộ lọc.</div>'; return; }
+    const sectioned = curGroup === '*' && !$('#libQ').value.trim() && !filt.size;
+    if (!sectioned) { const f = document.createElement('div'); f.className = 'flat'; for (const r of rows) f.append(card(r, curGroup === '*')); list.append(f); }
+    else {
+      const by = new Map(); for (const r of rows) { const g = r.group || NOGROUP; if (!by.has(g)) by.set(g, []); by.get(g).push(r); }
+      const order = [...groupsAll().map((g) => g.name), NOGROUP].filter((g) => by.has(g));
+      for (const g of order) {
+        const sec = document.createElement('section'); sec.className = 'sec' + (collapsed.has(g) ? ' col' : '');
+        const h = document.createElement('div'); h.className = 'sh';
+        h.innerHTML = `<span class="car">▾</span><span>${gIcon(g)} ${esc(gLabel(g))}</span><small>${by.get(g).length}</small><button title="Chỉ xem nhóm này">Xem nhóm →</button>`;
+        h.onclick = (e) => {
+          if (e.target.closest('button')) return setGroup(g);
+          collapsed.has(g) ? collapsed.delete(g) : collapsed.add(g); lset('bangDayHoc.libCollapsed', [...collapsed]); sec.classList.toggle('col');
+        };
+        const body = document.createElement('div'); body.className = 'sb';
+        for (const r of by.get(g)) body.append(card(r, false));
+        sec.append(h, body); list.append(sec);
+      }
     }
+    hilite();
   }
-  function openLib() { libEl.classList.add('open'); setSync(gas ? (lib.queue.length ? 'err' : 'ok') : 'local', lib.queue.length ? 'Có thay đổi chưa gửi' : ''); renderLib(); sync(); setTimeout(() => $('#libQ').focus(), 50); }
+  function hilite() {
+    const vis = shown.filter((x) => x.el.offsetParent !== null);
+    shown.forEach((x) => x.el.classList.remove('hi'));
+    if (hiIdx >= vis.length) hiIdx = vis.length - 1;
+    if (hiIdx >= 0 && vis[hiIdx]) { vis[hiIdx].el.classList.add('hi'); vis[hiIdx].el.scrollIntoView({ block: 'nearest' }); }
+    return vis;
+  }
+  function openLib() { libEl.classList.add('open'); setSync(gas ? (lib.queue.length ? 'err' : 'ok') : 'local', lib.queue.length ? 'Có thay đổi chưa gửi' : ''); hiIdx = -1; renderLib(); sync(); setTimeout(() => $('#libQ').focus(), 50); }
   $('#libBtn').onclick = () => (libEl.classList.contains('open') ? libEl.classList.remove('open') : openLib());
   $('#libClose').onclick = () => libEl.classList.remove('open');
-  $('#libQ').addEventListener('input', renderLib);
-  $('#libQ').addEventListener('keydown', (e) => { if (e.key === 'Enter') { const r = filtered()[0]; if (r) openRow(r); } if (e.key === 'Escape') libEl.classList.remove('open'); });
+  $('#libQ').addEventListener('input', () => { hiIdx = $('#libQ').value.trim() ? 0 : -1; renderLib(); });
+  $('#libQ').addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); const n = shown.filter((x) => x.el.offsetParent !== null).length; hiIdx = Math.max(0, Math.min(n - 1, hiIdx + (e.key === 'ArrowDown' ? 1 : -1))); hilite(); }
+    else if (e.key === 'Enter') { const vis = hilite(); const x = vis[Math.max(0, hiIdx)]; if (x) openRow(x.r); }
+    else if (e.key === 'Escape') { if ($('#libQ').value) { $('#libQ').value = ''; renderLib(); } else libEl.classList.remove('open'); }
+  });
+  $('#libSort').value = libSort;
+  $('#libSort').onchange = (e) => { libSort = e.target.value; lset('bangDayHoc.libSort', libSort); renderLib(); };
+  $('#libTagBtn').onclick = () => { lset('bangDayHoc.libTagsOpen', !lget('bangDayHoc.libTagsOpen', true)); renderLib(); };
+  $('#libWide').onclick = () => { libEl.classList.toggle('wide'); lset('bangDayHoc.libWide', libEl.classList.contains('wide')); $('#libWide').textContent = libEl.classList.contains('wide') ? '⤡ Thu gọn' : '⤢ Mở rộng'; };
+  if (lget('bangDayHoc.libWide', false)) { libEl.classList.add('wide'); $('#libWide').textContent = '⤡ Thu gọn'; }
   $('#libOpenAll').onclick = () => {
     const rows = filtered(); if (!rows.length) return;
     if (rows.length > 8 && !confirm('Mở ' + rows.length + ' link thành ' + rows.length + ' thẻ?')) return;
     rows.slice().reverse().forEach((r) => openRow(r));
-    toast('Đã mở ' + rows.length + ' thẻ' + (filt.size ? ' (tag: ' + [...filt].join(', ') + ')' : ''));
+    toast('Đã mở ' + rows.length + ' thẻ' + (curGroup !== '*' ? ' — nhóm ' + gLabel(curGroup) : '') + (filt.size ? ' (tag: ' + [...filt].join(', ') + ')' : ''));
   };
 
   /* --- lưu / sửa --- */
-  let editing = null, tagList = [];
+  let editing = null, tagList = [], pickGroup = '';
+  function drawGroups() {
+    const box = $('#sfGroup'); box.innerHTML = '';
+    for (const g of groupsAll()) {
+      const b = document.createElement('button'); b.type = 'button'; b.className = pickGroup === g.name ? 'on' : ''; b.title = g.desc || '';
+      b.textContent = g.icon + ' ' + g.name; b.onclick = () => { pickGroup = pickGroup === g.name ? '' : g.name; drawGroups(); };
+      box.append(b);
+    }
+    const add = document.createElement('button'); add.type = 'button'; add.className = 'add'; add.textContent = '＋ Nhóm mới';
+    add.onclick = () => {
+      const n = (prompt('Tên nhóm mới (ví dụ: Ôn thi THPT, Game lớp học, Lớp 12):') || '').trim(); if (!n) return;
+      const ic = (prompt('Biểu tượng cho nhóm (một emoji, bỏ trống = 🏷):', '🏷') || '🏷').trim().slice(0, 4);
+      if (!groupsAll().some((g) => g.name === n)) { customGroups.push({ name: n, icon: ic }); lset('bangDayHoc.groups', customGroups); }
+      pickGroup = n; drawGroups();
+    };
+    box.append(add);
+  }
   function drawTags() {
     const box = $('#sfTags'), inp = $('#sfTagIn');
     box.querySelectorAll('.tg').forEach((x) => x.remove());
@@ -3606,7 +4072,7 @@ function doPost(e) {
   $('#sfSug').onclick = (e) => { const s = e.target.closest('[data-s]'); if (s) { addTag(s.dataset.s); $('#sfTagIn').focus(); } };
   $('#sfUrl').addEventListener('input', drawTags);
   function showForm(r, isNew) {
-    editing = r; tagList = (r.tags || []).slice();
+    editing = r; tagList = (r.tags || []).slice(); pickGroup = r.group || ''; drawGroups();
     $('#saveTitle').textContent = isNew ? '⭐ Lưu link vào thư viện' : '✎ Sửa link trong thư viện';
     $('#sfTitle').value = r.title || ''; $('#sfUrl').value = r.url || ''; $('#sfNote').value = r.note || '';
     $('#sfTagIn').value = ''; drawTags();
@@ -3621,8 +4087,8 @@ function doPost(e) {
     const u = tabLink(cur);
     if (!u) return toast(cur && cur.type === 'start' ? 'Hãy mở một trang web / GeoGebra / bảng rồi bấm ⭐' : 'File trong máy không lưu link được — hãy đưa file lên Google Drive rồi dán link');
     const dup = lib.rows.find((r) => r.url === u);
-    if (dup) { toast('Link này đã có trong thư viện — sửa tag / ghi chú'); return showForm(dup, false); }
-    const r = { id: uid(), time: new Date().toISOString(), title: cur.title || host(u), url: u, type: kindOf(u), tags: [], note: '', opens: 0, last: '' };
+    if (dup) { toast('Link này đã có trong thư viện — sửa nhóm / tag / ghi chú'); return showForm(dup, false); }
+    const r = { id: uid(), time: new Date().toISOString(), title: cur.title || host(u), url: u, type: kindOf(u), group: autoGroup(u) || lget('bangDayHoc.lastGroup', 'Dạy học'), tags: [], note: '', opens: 0, last: '' };
     showForm(r, true);
     const ym = u.match(/youtube\.com\/embed\/([\w-]+)/);
     if (ym && (r.title === 'YouTube' || !r.title)) { const t = await ytTitle('https://www.youtube.com/watch?v=' + ym[1]); if (t && editing === r && $('#sfTitle').value === r.title) $('#sfTitle').value = t; }
@@ -3634,7 +4100,7 @@ function doPost(e) {
     e.preventDefault();
     if ($('#sfTagIn').value.trim()) addTag($('#sfTagIn').value);
     const r = editing; if (!r) return;
-    r.title = $('#sfTitle').value.trim() || r.title; r.url = $('#sfUrl').value.trim(); r.note = $('#sfNote').value.trim(); r.tags = tagList.slice(); r.type = kindOf(r.url);
+    r.title = $('#sfTitle').value.trim() || r.title; r.url = $('#sfUrl').value.trim(); r.note = $('#sfNote').value.trim(); r.tags = tagList.slice(); r.type = kindOf(r.url); r.group = pickGroup; if (pickGroup) lset('bangDayHoc.lastGroup', pickGroup);
     if (!lib.rows.includes(r)) lib.rows.unshift(r);
     push({ action: 'upsert', row: r }); saveLib();
     $('#saveDlg').close(); toast('Đã lưu "' + r.title + '"' + (gas ? ' lên Google Sheet' : ' (trên máy — nối Google Sheet ở ⚙)'));
@@ -3660,7 +4126,7 @@ function doPost(e) {
     if (!/^https:\/\/script\.google(usercontent)?\.com\/.+/.test(url)) { $('#gasMsg').textContent = '⚠ URL phải dạng https://script.google.com/macros/s/…/exec'; return; }
     $('#gasMsg').textContent = '⏳ Đang kiểm tra…';
     try {
-      const rows = await gasList(url, key);
+      const rows = keepGroups(await gasList(url, key));
       gas = { url, key }; lset(CFG, gas);
       // gộp: link trên máy chưa có trên Sheet → gửi lên
       const ids = new Set(rows.map((r) => r.id));
@@ -3798,6 +4264,327 @@ function doPost(e) {
   $('#libSetup').onclick = openSettings;
   $('#setBtn').onclick = openSettings;
 
+  /* ---------------- Câu hỏi từ Markdown (.md): khung nổi, chuyển câu, đáp án ẩn ---------------- */
+  const QS_KEY = 'bangDayHoc.qs', QP_KEY = 'bangDayHoc.qp';
+  const SAMPLE_MD = "# Ôn tập: Quan hệ song song trong không gian\nToán 11 · Chương 4 — FILE MẪU: sửa nội dung rồi lưu lại để dùng lần sau\n\n\u003c!--\nQUY ƯỚC (phần này bị ẩn khi trình chiếu):\n• Khối đầu tiên bắt đầu bằng \"# \" là tiêu đề bộ câu hỏi.\n• Mỗi câu cách nhau bằng một dòng chỉ có ba gạch: ---\n• Công thức viết trong $...$ (cùng dòng) hoặc $$...$$ (căn giữa).\n• Trắc nghiệm: mỗi phương án một dòng, bắt đầu bằng A. B. C. D.\n• Đúng/Sai: mỗi mệnh đề một dòng, bắt đầu bằng a) b) c) d)\n• Dòng \"Đáp án: ...\" bị ẩn, bấm 👁 Đáp án mới hiện (trắc nghiệm: Đáp án: B; đúng/sai: Đáp án: Đ S Đ S).\n• Câu dài: một dòng chỉ có +++ là DẤU NGẮT SLIDE — câu được chia nhiều trang, bấm ▶ để sang trang.\n• Mọi thứ từ dòng \"Lời giải:\" (hoặc \"### Lời giải\") trở xuống bị ẩn tới khi bấm 👁.\n• Dùng được Markdown: **đậm**, *nghiêng*, danh sách -, bảng | |, ảnh ![](https://...).\n-->\n\n---\n\n**Câu 1.** Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành. Giao tuyến của hai mặt phẳng $(SAB)$ và $(SCD)$ là đường thẳng\nA. đi qua $S$ và song song với $AD$.\nB. đi qua $S$ và song song với $AB$.\nC. $SO$, với $O$ là giao điểm của $AC$ và $BD$.\nD. $SA$.\n\nĐáp án: B\n\nLời giải: Hai mặt phẳng $(SAB)$ và $(SCD)$ có điểm chung $S$ và lần lượt chứa hai đường thẳng song song $AB \\parallel CD$, nên giao tuyến là đường thẳng đi qua $S$ và song song với $AB$.\n\n---\n\n**Câu 2.** Cho tứ diện $ABCD$. Gọi $M, N$ lần lượt là trung điểm của $AB$ và $AC$. Xét tính đúng – sai của các mệnh đề sau:\na) $MN \\parallel BC$.\nb) $MN \\parallel (BCD)$.\nc) $MN$ cắt mặt phẳng $(BCD)$.\nd) $MN = \\dfrac{1}{2} BD$.\n\nĐáp án: Đ Đ S S\n\nLời giải: $MN$ là đường trung bình của $\\triangle ABC$ nên $MN \\parallel BC$ và $MN = \\dfrac{1}{2}BC$; mà $BC \\subset (BCD)$ nên $MN \\parallel (BCD)$.\n\n---\n\n**Câu 3.** *(Trả lời ngắn)* Cho hình chóp $S.ABC$ có $SA = 6$. Gọi $G$ là trọng tâm tam giác $ABC$, mặt phẳng qua $G$ song song với $(SBC)$ cắt $SA$ tại $M$. Tính độ dài $AM$.\n\nĐáp án: 4\n\nLời giải: Gọi $I$ là trung điểm $BC$. Mặt phẳng qua $G$ song song $(SBC)$ cắt $(SAI)$ theo giao tuyến $GM \\parallel SI$, nên\n$$\\frac{AM}{AS} = \\frac{AG}{AI} = \\frac{2}{3} \\Rightarrow AM = 4.$$\n\n---\n\n**Câu 4.** *(Tự luận)* Cho hình chóp $S.ABCD$ có đáy là hình thang, $AD \\parallel BC$ và $AD = 2BC$. Gọi $M$ là trung điểm của $SA$.\n\n1. Tìm giao tuyến của hai mặt phẳng $(SAD)$ và $(SBC)$.\n2. Chứng minh $BM \\parallel (SCD)$.\n\n### Lời giải\n1. $\\begin{cases} S \\in (SAD) \\cap (SBC) \\\\ AD \\parallel BC \\end{cases}$ nên giao tuyến là đường thẳng $Sx$ qua $S$, song song với $AD$.\n\n+++\n\n2. Gọi $N$ là trung điểm $SD$ thì $MN \\parallel AD$, $MN = \\dfrac{1}{2}AD = BC$, nên $BCNM$ là hình bình hành, suy ra $BM \\parallel CN$. Mà $CN \\subset (SCD)$ nên $BM \\parallel (SCD)$.\n\n---\n\n**Câu 5.** Bảng giá trị và hình minh hoạ cũng hiển thị được:\n\n| $x$ | $-1$ | $0$ | $1$ |\n|---|---|---|---|\n| $y = x^2$ | $1$ | $0$ | $1$ |\n\n- Gạch đầu dòng thứ nhất\n- Gạch đầu dòng thứ hai với **chữ đậm** và *chữ nghiêng*\n\nĐáp án: Đây là câu minh hoạ định dạng.\n";
+  let qs = null;        // { title, sub, items: [{ html, ans, sol, kind, key }], idx, md }
+  let qpState = lget(QP_KEY, { x: null, y: 70, w: 560, h: 420, f: 22, min: false });
+  function ensureKatexTop() {
+    if (!window.katex) { const s = document.createElement('script'); s.textContent = $('#src-katex').textContent; document.head.append(s); }
+    if (!$('#katexTopCss')) { const st = document.createElement('style'); st.id = 'katexTopCss'; st.textContent = $('#src-katexcss').textContent + $('#src-noface').textContent; document.head.append(st); }
+  }
+  /* --- Markdown + LaTeX → HTML (gọn, đủ cho đề toán) --- */
+  function mdToHtml(src) {
+    const math = [];
+    const keep = (tex, disp) => { let h; try { h = katex.renderToString(tex, { throwOnError: false, displayMode: disp }); } catch (e) { h = esc(tex); } math.push(h); return '\u0000' + (math.length - 1) + '\u0000'; };
+    let s = String(src).replace(/\\\$/g, '\u0001');
+    s = s.replace(/\$\$([\s\S]+?)\$\$/g, (m, t) => keep(t, true)).replace(/\$([^$\n]+?)\$/g, (m, t) => keep(t, false));
+    s = esc(s).replace(/\u0001/g, '$');
+    const inline = (t) => t
+      .replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, (m, a, u) => `<img alt="${a}" src="${u}">`)
+      .replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+      .replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>').replace(/__([^_]+)__/g, '<b>$1</b>')
+      .replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<i>$2</i>').replace(/`([^`]+)`/g, '<code>$1</code>');
+    const lines = s.split('\n'), out = [];
+    let i = 0;
+    while (i < lines.length) {
+      const l = lines[i];
+      if (!l.trim()) { i++; continue; }
+      let m;
+      if ((m = l.match(/^(#{1,4})\s+(.*)$/))) { out.push(`<h${m[1].length}>${inline(m[2])}</h${m[1].length}>`); i++; continue; }
+      if (/^\s*\|.*\|\s*$/.test(l)) {          // bảng
+        const rows = []; while (i < lines.length && /^\s*\|.*\|\s*$/.test(lines[i])) rows.push(lines[i++]);
+        const cells = (r) => r.trim().replace(/^\||\|$/g, '').split('|').map((c) => c.trim());
+        const body = rows.filter((r) => !/^\s*\|?\s*:?-{2,}/.test(r));
+        out.push('<table>' + body.map((r, k) => '<tr>' + cells(r).map((c) => (k === 0 && rows[1] && /^\s*\|?\s*:?-{2,}/.test(rows[1]) ? `<th>${inline(c)}</th>` : `<td>${inline(c)}</td>`)).join('') + '</tr>').join('') + '</table>');
+        continue;
+      }
+      if (/^\s*([-*+])\s+/.test(l) || /^\s*\d+[.)]\s+/.test(l)) {   // danh sách
+        const ord = /^\s*\d+[.)]\s+/.test(l), items = [], st0 = ord ? parseInt(l, 10) : 1;
+        while (i < lines.length && (ord ? /^\s*\d+[.)]\s+/ : /^\s*[-*+]\s+/).test(lines[i])) {
+          let it = lines[i++].replace(ord ? /^\s*\d+[.)]\s+/ : /^\s*[-*+]\s+/, '');
+          while (i < lines.length && lines[i].trim() && /^\s{2,}\S/.test(lines[i]) ) it += '<br>' + lines[i++].trim();
+          items.push(`<li>${inline(it)}</li>`);
+        }
+        out.push(ord ? `<ol${st0 > 1 ? ` start="${st0}"` : ''}>${items.join('')}</ol>` : `<ul>${items.join('')}</ul>`); continue;
+      }
+      const para = []; while (i < lines.length && lines[i].trim() && !/^(#{1,4})\s+/.test(lines[i]) && !/^\s*\|.*\|\s*$/.test(lines[i]) && !/^\s*([-*+]|\d+[.)])\s+/.test(lines[i])) para.push(inline(lines[i++]));
+      out.push(`<p>${para.join('<br>')}</p>`);
+    }
+    return out.join('').replace(/\u0000(\d+)\u0000/g, (m, k) => math[+k]);
+  }
+  // Tóm tắt: dòng "GT:" / "KL:" → bảng giả thiết – kết luận; còn lại là Markdown
+  function sumToHtml(t) {
+    const ls = t.split('\n'); let mode = null; const gt = [], kl = [], rest = [];
+    for (const l of ls) {
+      let m;
+      if ((m = l.match(/^\s*(\*\*)?\s*(GT|Giả thiết)\s*(\*\*)?\s*[:.]\s*(.*)$/i))) { mode = 'gt'; if (m[4].trim()) gt.push(m[4]); continue; }
+      if ((m = l.match(/^\s*(\*\*)?\s*(KL|Kết luận)\s*(\*\*)?\s*[:.]\s*(.*)$/i))) { mode = 'kl'; if (m[4].trim()) kl.push(m[4]); continue; }
+      if (!l.trim()) { mode = mode && (gt.length || kl.length) ? null : mode; continue; }
+      if (mode === 'gt') gt.push(l); else if (mode === 'kl') kl.push(l); else rest.push(l);
+    }
+    const inl = (x) => mdToHtml(x).replace(/^<p>|<\/p>$/g, '');
+    let h = '';
+    if (gt.length || kl.length) h += '<table class="gtkl">' + (gt.length ? `<tr><th>GT</th><td>${gt.map(inl).join('<br>')}</td></tr>` : '') + (kl.length ? `<tr><th>KL</th><td>${kl.map(inl).join('<br>')}</td></tr>` : '') + '</table>';
+    if (rest.length) h += mdToHtml(rest.join('\n'));
+    return h;
+  }
+  /* --- tách câu hỏi --- */
+  function parseQs(md) {
+    const clean = String(md).replace(/\r/g, '').replace(/<!--\s*(slide|ngắt|ngat|ngắt slide)\s*-->/gi, '\n+++\n').replace(/<!--[\s\S]*?-->/g, '');
+    let blocks = clean.split(/\n[ \t]*-{3,}[ \t]*(?=\n|$)/).map((b) => b.trim()).filter(Boolean);
+    let title = '', sub = '', head = null;
+    if (blocks.length && /^#\s+/.test(blocks[0]) && blocks.length > 1) {
+      head = blocks.shift(); const ls = head.split('\n'); title = ls[0].replace(/^#\s+/, '').trim(); sub = ls.slice(1).join(' ').trim();
+    }
+    // dấu ngắt slide trong một câu: dòng chỉ có +++ (hoặc <!-- slide -->)
+    const SLIDE_RE = /\n?[ \t]*\+{3,}[ \t]*(?=\n|$)/;
+    const items = [];
+    blocks.forEach((b, qi) => {
+      const parts = b.split(new RegExp(SLIDE_RE.source, 'g')).map((x) => x.trim()).filter(Boolean);
+      let inSol = false;
+      parts.forEach((pt, pi) => {
+        let src = pt, cont = false;
+        if (inSol && !/^\s*(#{1,4}\s*)?(\*\*)?\s*(Lời giải|Hướng dẫn|Giải|Tóm tắt)\b/i.test(src)) { src = 'Lời giải:\n' + src; cont = true; }   // trang sau của lời giải vẫn ẩn tới khi bấm 👁
+        if (/^\s*(#{1,4}\s*)?(\*\*)?\s*(Lời giải|Hướng dẫn|Giải)\b/im.test(src)) inSol = true;
+        const it = parseBlock(src); it.solCont = cont; it.qi = qi; it.pi = pi; it.pn = parts.length; it.qplain = b;
+        items.push(it);
+      });
+    });
+    return { title, sub, items, head, blocks, nq: blocks.length };
+  }
+  function parseBlock(b) {
+    {
+      const ls = b.split('\n');
+      let sol = '', key = '';
+      const SOL_RE = /^\s*(#{1,4}\s*)?(\*\*)?\s*(Lời giải|Hướng dẫn giải|Hướng dẫn|Giải)\s*(\*\*)?\s*[:.]?\s*(\*\*)?\s*/i;
+      const SUM_RE = /^\s*(#{1,4}\s*)?(\*\*)?\s*(Tóm tắt đề bài|Tóm tắt đề|Tóm tắt)\s*(\*\*)?\s*[:.]?\s*(\*\*)?\s*/i;
+      const isSol = (l) => /^\s*(#{1,4}\s*)?(\*\*)?\s*(Lời giải|Hướng dẫn|Giải)\b/i.test(l);
+      const isSum = (l) => /^\s*(#{1,4}\s*)?(\*\*)?\s*Tóm tắt\b/i.test(l);
+      const si = ls.findIndex(isSol), mi = ls.findIndex(isSum);
+      const marks = [si, mi].filter((x) => x >= 0);
+      const endOf = (i) => { const c = marks.filter((x) => x > i); return c.length ? Math.min(...c) : ls.length; };
+      const keyOut = (arr) => arr.filter((l) => { const m = l.match(/^\s*(\*\*)?\s*Đáp án\s*(\*\*)?\s*[:.]\s*(\*\*)?\s*(.+?)\s*(\*\*)?\s*$/i); if (m) { key = m[4]; return false; } return true; });
+      let body = keyOut(ls.slice(0, marks.length ? Math.min(...marks) : ls.length));
+      let sumTxt = '';
+      if (mi >= 0) { const seg = ls.slice(mi, endOf(mi)); seg[0] = seg[0].replace(SUM_RE, ''); sumTxt = keyOut(seg).join('\n').trim(); }
+      if (si >= 0) { const seg = ls.slice(si, endOf(si)); seg[0] = seg[0].replace(SOL_RE, ''); sol = keyOut(seg).join('\n'); }
+      // phương án A. B. C. D. (mỗi dòng một phương án, hoặc nhiều phương án trên một dòng)
+      const opts = [], tf = [], stem = [];
+      for (const l of body) {
+        const multi = l.match(/^\s*A[.)]\s+.+\s{2,}B[.)]\s+/);
+        if (multi) { l.split(/\s{2,}(?=[A-D][.)]\s)/).forEach((p) => { const m = p.match(/^\s*([A-D])[.)]\s+(.*)$/); if (m) opts.push([m[1], m[2]]); }); continue; }
+        let m;
+        if ((m = l.match(/^\s*\*{0,2}([A-D])[.)]\*{0,2}\s+(.*)$/)) && (opts.length || m[1] === 'A')) { opts.push([m[1], m[2]]); continue; }
+        if ((m = l.match(/^\s*\*{0,2}([a-d])\)\*{0,2}\s+(.*)$/)) && (tf.length || m[1] === 'a')) { tf.push([m[1], m[2]]); continue; }
+        stem.push(l);
+      }
+      const kind = opts.length >= 2 ? 'mc' : tf.length >= 2 ? 'tf' : 'open';
+      let html = mdToHtml(stem.join('\n'));
+      if (kind === 'mc') {
+        const maxLen = Math.max(...opts.map((o) => o[1].replace(/\$[^$]*\$/g, 'xxxx').length));
+        const cols = maxLen < 22 ? 4 : maxLen < 48 ? 2 : 1;
+        html += `<div class="opts" style="grid-template-columns:repeat(${Math.min(cols, opts.length)},1fr)">` + opts.map(([L, t]) => `<button class="opt" data-o="${L}"><b>${L}.</b><span>${mdToHtml(t).replace(/^<p>|<\/p>$/g, '')}</span></button>`).join('') + '</div>';
+      }
+      if (kind === 'tf') html += '<div class="tf">' + tf.map(([L, t]) => `<div class="st"><b>${L})</b><span>${mdToHtml(t).replace(/^<p>|<\/p>$/g, '')}</span></div><div class="bt" data-s="${L}"><button data-v="Đ">Đ</button><button data-v="S">S</button></div>`).join('') + '</div>';
+      // đáp án dạng chuẩn để chấm thử
+      let norm = null;
+      if (kind === 'mc') { const m = key.match(/\b([A-D])\b/); if (m) norm = m[1]; }
+      if (kind === 'tf') { const v = key.toUpperCase().replace(/ĐÚNG/g, 'Đ').replace(/SAI/g, 'S').match(/[ĐS]/g); if (v && v.length >= tf.length) norm = v.slice(0, tf.length); }
+      return { html, kind, key, norm, sol: sol.trim() ? mdToHtml(sol) : '', sum: sumTxt ? sumToHtml(sumTxt) : '', plain: b };
+    }
+  }
+  /* --- khung nổi --- */
+  const qp = $('#qp');
+  function placeQp() {
+    const s = qpState, W = innerWidth, H = innerHeight;
+    const w = Math.min(Math.max(300, s.w || 560), W - 16), h = Math.min(Math.max(180, s.h || 420), H - 60);
+    const x = s.x == null ? W - w - 24 : Math.min(Math.max(4, s.x), W - 80), y = Math.min(Math.max(4, s.y || 70), H - 50);
+    Object.assign(qp.style, { left: x + 'px', top: y + 'px', width: w + 'px', height: s.min ? 'auto' : h + 'px' });
+    qp.style.setProperty('--qf', (s.f || 22) + 'px');
+    qp.classList.toggle('min', !!s.min);
+    $('#qpMin').textContent = s.min ? '▢' : '▁';
+  }
+  const saveQp = () => lset(QP_KEY, qpState);
+  new ResizeObserver(() => {
+    if (!qp.classList.contains('open') || qpState.min) return;
+    const r = qp.getBoundingClientRect(); if (r.width < 50) return;
+    if (Math.abs(r.width - qpState.w) > 2 || Math.abs(r.height - qpState.h) > 2) { qpState.w = Math.round(r.width); qpState.h = Math.round(r.height); clearTimeout(placeQp._t); placeQp._t = setTimeout(saveQp, 300); }
+  }).observe(qp);
+  $('#qpHead').addEventListener('pointerdown', (e) => {
+    if (e.target.closest('button')) return;
+    const r = qp.getBoundingClientRect(), dx = e.clientX - r.left, dy = e.clientY - r.top, hd = e.currentTarget;
+    hd.setPointerCapture(e.pointerId);
+    const mv = (ev) => { qpState.x = ev.clientX - dx; qpState.y = ev.clientY - dy; qp.style.left = qpState.x + 'px'; qp.style.top = qpState.y + 'px'; };
+    const up = () => { hd.removeEventListener('pointermove', mv); hd.removeEventListener('pointerup', up); saveQp(); };
+    hd.addEventListener('pointermove', mv); hd.addEventListener('pointerup', up);
+  });
+  function showQ(i) {
+    if (!qs || !qs.items.length) return;
+    qs.idx = Math.max(0, Math.min(qs.items.length - 1, i));
+    const q = qs.items[qs.idx];
+    $('#qpTitle').innerHTML = `Câu ${q.qi + 1}/${qs.nq}` + (q.pn > 1 ? `<span class="pg">· trang ${q.pi + 1}/${q.pn}</span>` : '') + (qs.title ? `<small>${esc(qs.title)}</small>` : '');
+    const keyHtml = q.key ? `<div class="k">Đáp án: ${mdToHtml(q.key).replace(/^<p>|<\/p>$/g, '')}</div>` : '';
+    $('#qpBody').innerHTML = q.html + (q.sum ? `<div class="sum" id="qpSumBox"><div class="sh">📝 Tóm tắt</div>${q.sum}</div>` : '') + (q.key || q.sol ? `<div class="ans" id="qpAnsBox">${keyHtml}${q.sol ? '<div><b>Lời giải' + (q.solCont ? ' (tiếp)' : '') + '.</b></div>' + q.sol : ''}</div>` : '');
+    $('#qpBody').scrollTop = 0;
+    $('#qpEdit').classList.remove('on');
+    $('#qpAns').classList.remove('on'); $('#qpAns').disabled = !(q.key || q.sol);
+    $('#qpSum').classList.remove('on'); $('#qpSum').disabled = !q.sum;
+    if (q.sum && qpState.sumOpen) toggleSum(true);
+    $('#qpPrev').disabled = qs.idx === 0; $('#qpNext').disabled = qs.idx === qs.items.length - 1;
+    const nav = $('#qpNav'); nav.innerHTML = '';
+    let curB = null;
+    qs.items.forEach((it, k) => {
+      if (it.pi > 0) return;
+      const b = document.createElement('button'); b.textContent = it.qi + 1; b.className = (it.qi === q.qi ? 'on' : '') + (qs.seen && qs.seen[it.qi] ? ' done' : ''); b.onclick = () => showQ(k); nav.append(b);
+      if (it.qi === q.qi) { curB = b; if (it.pn > 1) for (let j = 0; j < it.pn; j++) { const d = document.createElement('button'); d.className = 'sub' + (k + j === qs.idx ? ' on' : ''); d.title = 'Trang ' + (j + 1); d.onclick = () => showQ(k + j); nav.append(d); } }
+    });
+    if (curB) curB.scrollIntoView({ inline: 'nearest', block: 'nearest' });
+    lset(QS_KEY, { md: qs.md, idx: qs.idx, orig: qs.orig });
+  }
+  function revealAns(on) {
+    const q = qs && qs.items[qs.idx]; if (!q) return;
+    const box = $('#qpAnsBox'); if (box) box.classList.toggle('show', on);
+    $('#qpAns').classList.toggle('on', on);
+    if (on) { (qs.seen = qs.seen || {})[q.qi] = true; const nb = $('#qpNav').querySelector('button.on:not(.sub)'); if (nb) nb.classList.add('done'); }
+    if (q.kind === 'mc' && q.norm) $('#qpBody').querySelectorAll('.opt').forEach((b) => { b.classList.toggle('right', on && b.dataset.o === q.norm); b.classList.toggle('wrong', on && b.classList.contains('pick') && b.dataset.o !== q.norm); });
+    if (q.kind === 'tf' && q.norm) $('#qpBody').querySelectorAll('.tf .bt').forEach((g, k) => g.querySelectorAll('button').forEach((b) => { b.classList.toggle('right', on && b.dataset.v === q.norm[k]); b.classList.toggle('wrong', on && b.classList.contains('pick') && b.dataset.v !== q.norm[k]); }));
+  }
+  $('#qpBody').addEventListener('click', (e) => {
+    const o = e.target.closest('.opt');
+    if (o) { o.parentNode.querySelectorAll('.opt').forEach((b) => b.classList.toggle('pick', b === o)); if ($('#qpAns').classList.contains('on')) revealAns(true); return; }
+    const t = e.target.closest('.tf .bt button');
+    if (t) { t.parentNode.querySelectorAll('button').forEach((b) => b.classList.toggle('pick', b === t)); if ($('#qpAns').classList.contains('on')) revealAns(true); }
+  });
+  $('#qpPrev').onclick = () => showQ(qs.idx - 1);
+  $('#qpNext').onclick = () => showQ(qs.idx + 1);
+  $('#qpAns').onclick = () => revealAns(!$('#qpAns').classList.contains('on'));
+  function toggleSum(on) { const b = $('#qpSumBox'); if (!b) return; b.classList.toggle('show', on); $('#qpSum').classList.toggle('on', on); }
+  $('#qpSum').onclick = () => toggleSum(!$('#qpSum').classList.contains('on'));
+  // giao diện khung: nền + màu công thức tương phản
+  const QTHEMES = {
+    light: { n: 'Sáng', bg: '#ffffff', tx: '#0f172a', m: '#1d4ed8', acc: '#2563eb', opt: '#f8fafc', bd: '#e2e8f0' },
+    cream: { n: 'Giấy kem', bg: '#fffbeb', tx: '#1c1917', m: '#b91c1c', acc: '#b45309', opt: '#fef3c7', bd: '#fde68a' },
+    dark: { n: 'Nền tối', bg: '#0f172a', tx: '#f1f5f9', m: '#fde047', acc: '#7dd3fc', opt: '#1e293b', bd: '#334155' },
+    chalk: { n: 'Bảng xanh', bg: '#14532d', tx: '#f0fdf4', m: '#fde047', acc: '#bef264', opt: '#166534', bd: '#15803d' }
+  };
+  const MCOLORS = [['auto', 'Tự động (tương phản với nền)'], ['#1d4ed8', 'Xanh dương'], ['#b91c1c', 'Đỏ'], ['#7e22ce', 'Tím'], ['#c2410c', 'Cam'], ['#047857', 'Xanh lá'], ['#fde047', 'Vàng (nền tối)'], ['inherit', 'Cùng màu chữ']];
+  function applyQTheme() {
+    const T = QTHEMES[qpState.theme] || QTHEMES.light, mc = qpState.mc && qpState.mc !== 'auto' ? qpState.mc : T.m;
+    const v = { '--qbg': T.bg, '--qtx': T.tx, '--qm': mc === 'inherit' ? T.tx : mc, '--qacc': T.acc, '--qopt': T.opt, '--qbd': T.bd };
+    for (const [k, x] of Object.entries(v)) qp.style.setProperty(k, x);
+  }
+  $('#qpTheme').onclick = (e) => {
+    e.stopPropagation();
+    const m = $('#qpMenu'); if (m.classList.toggle('open')) {
+      m.innerHTML = '<h5>Nền khung</h5>' + Object.entries(QTHEMES).map(([k, T]) => `<button data-t="${k}" class="${(qpState.theme || 'light') === k ? 'on' : ''}"><i style="background:${T.bg};border-color:${T.bd}"></i>${T.n}</button>`).join('') +
+        '<h5>Màu công thức</h5>' + MCOLORS.map(([c, n]) => `<button data-c="${c}" class="${(qpState.mc || 'auto') === c ? 'on' : ''}"><i style="background:${/^#/.test(c) ? c : 'linear-gradient(135deg,#1d4ed8 50%,#fde047 50%)'}"></i>${n}</button>`).join('') +
+        `<h5>Tóm tắt</h5><button data-s="1" class="${qpState.sumOpen ? 'on' : ''}">📝 Luôn hiện tóm tắt khi sang câu mới</button>`;
+    }
+  };
+  $('#qpMenu').onclick = (e) => {
+    const b = e.target.closest('button'); if (!b) return; e.stopPropagation();
+    if (b.dataset.t) qpState.theme = b.dataset.t;
+    if (b.dataset.c) qpState.mc = b.dataset.c;
+    if (b.dataset.s) { qpState.sumOpen = !qpState.sumOpen; if (qpState.sumOpen) toggleSum(true); }
+    applyQTheme(); saveQp(); $('#qpMenu').classList.remove('open'); $('#qpTheme').click();
+  };
+  document.addEventListener('pointerdown', (e) => { if (!e.target.closest('#qpMenu,#qpTheme')) $('#qpMenu').classList.remove('open'); }, true);
+  applyQTheme();
+  $('#qpSmall').onclick = () => { qpState.f = Math.max(13, (qpState.f || 22) - 2); placeQp(); saveQp(); };
+  $('#qpBig').onclick = () => { qpState.f = Math.min(56, (qpState.f || 22) + 2); placeQp(); saveQp(); };
+  $('#qpMin').onclick = () => { qpState.min = !qpState.min; placeQp(); saveQp(); };
+  $('#qpClose').onclick = () => qp.classList.remove('open');
+  qp.addEventListener('keydown', (e) => {
+    if (e.target.closest && e.target.closest('.qed')) return;   // đang sửa: phím gõ bình thường
+    if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); showQ(qs.idx + 1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); showQ(qs.idx - 1); }
+    else if (e.key === ' ' || e.key.toLowerCase() === 'd') { e.preventDefault(); revealAns(!$('#qpAns').classList.contains('on')); }
+    else if (e.key.toLowerCase() === 't') { e.preventDefault(); toggleSum(!$('#qpSum').classList.contains('on')); }
+    else if (e.key === 'Home') { e.preventDefault(); qpReset(); }
+    else if (e.key.toLowerCase() === 'e') { e.preventDefault(); qpEdit(); }
+  });
+  qp.tabIndex = -1;
+  qp.addEventListener('pointerenter', () => { if (!document.activeElement || !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) qp.focus({ preventScroll: true }); });
+  // chép câu hỏi lên bảng vẽ (giữ công thức)
+  $('#qpBoard').onclick = () => {
+    const q = qs && qs.items[qs.idx]; if (!q) return;
+    let body = q.plain.split('\n');
+    const si = body.findIndex((l) => /^\s*(#{1,4}\s*)?(\*\*)?\s*(Lời giải|Hướng dẫn|Giải|Tóm tắt)\b/i.test(l)); if (si >= 0) body = body.slice(0, si);
+    const txt = body.filter((l) => !/^\s*(\*\*)?\s*Đáp án\s*(\*\*)?\s*[:.]/i.test(l))
+      .map((l) => l.replace(/^#{1,4}\s+/, '').replace(/\*\*([^*]+)\*\*/g, '$1').replace(/(^|[^*])\*([^*]+)\*/g, '$1$2').replace(/^\s*[-*+]\s+/, '• '))
+      .join('\n').replace(/\n{2,}/g, '\n').trim();
+    if (!A.addText) return toast('Bản này chưa hỗ trợ chép lên bảng');
+    A.addText(txt, 90, 70, 26); toast('Đã chép câu ' + (qs.idx + 1) + ' lên bảng — chọn Σ rồi bấm vào chữ để sửa');
+  };
+  function loadQs(md, idx, silent, opts) {
+    ensureKatexTop();
+    const p = parseQs(md);
+    if (!p.items.length) { if (!silent) toast('Không tìm thấy câu hỏi nào — các câu phải cách nhau bằng dòng ---'); return false; }
+    qs = { ...p, md, idx: 0, seen: {}, orig: (opts && opts.orig) || md };
+    qp.classList.add('open'); placeQp(); showQ(idx || 0);
+    if (!silent) toast(`Đã tải ${p.nq} câu hỏi${p.title ? ' — ' + p.title : ''}`);
+    return true;
+  }
+  /* --- hộp mở / dán / tải file mẫu --- */
+  function openQsDlg() { closeMenus(); $('#qsMsg').textContent = ''; $('#qsText').value = qs ? qs.md : ''; $('#qsDlg').showModal(); }
+  $('#qsBtn').onclick = () => (qs && !qp.classList.contains('open') ? (qp.classList.add('open'), placeQp(), showQ(qs.idx)) : openQsDlg());
+  $('#qsBtn').oncontextmenu = (e) => { e.preventDefault(); openQsDlg(); };
+  $('#qsFile').onclick = () => $('#qsIn').click();
+  $('#qsIn').onchange = async (e) => { const f = e.target.files[0]; e.target.value = ''; if (!f) return; const t = await f.text(); $('#qsText').value = t; $('#qsMsg').textContent = '✓ Đã đọc ' + f.name + ' — bấm ▶ Hiện khung câu hỏi'; };
+  $('#qsSample').onclick = () => dl(new Blob([SAMPLE_MD], { type: 'text/markdown;charset=utf-8' }), 'mau-cau-hoi.md');
+  const SAMPLE_MD2 = "# Luyện tập: Đường thẳng và mặt phẳng song song\nToán 11 · Bài 13 — MẪU CÂU HỎI CÓ TÓM TẮT (GT / KL)\n\n\u003c!--\nQUY ƯỚC THÊM CHO MẪU NÀY (phần này bị ẩn khi trình chiếu):\n• Phần \"Tóm tắt:\" (hoặc \"### Tóm tắt\") nằm sau đề bài, bị ẩn tới khi bấm 📝 Tóm tắt (phím T).\n• Trong tóm tắt, dòng bắt đầu \"GT:\" là giả thiết, \"KL:\" là kết luận → hiện thành bảng GT | KL.\n  Giả thiết nhiều ý: viết mỗi ý một dòng ngay dưới \"GT:\".\n• Bài đại số / thực tế: dùng \"Cho:\", \"Tìm:\" hoặc gạch đầu dòng tuỳ ý.\n• Sau đó vẫn dùng \"Đáp án:\" và \"Lời giải:\" như mẫu cơ bản (bấm 👁 để hiện).\n• Thứ tự trong mỗi câu: Đề bài → Tóm tắt → Đáp án → Lời giải.\n-->\n\n---\n\n**Câu 1.** Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành. Gọi $M, N$ lần lượt là trung điểm của $SA$ và $SB$. Chứng minh $MN \\parallel (SCD)$.\n\nTóm tắt:\nGT: $S.ABCD$, $ABCD$ là hình bình hành\n$M$ là trung điểm $SA$, $N$ là trung điểm $SB$\nKL: $MN \\parallel (SCD)$\n\nLời giải: $MN$ là đường trung bình của $\\triangle SAB$ nên $MN \\parallel AB$. Mà $AB \\parallel CD$ nên $MN \\parallel CD$.\n$$\\begin{cases} MN \\not\\subset (SCD) \\\\ MN \\parallel CD \\\\ CD \\subset (SCD) \\end{cases} \\Rightarrow MN \\parallel (SCD).$$\n\n---\n\n**Câu 2.** Cho tứ diện $ABCD$. Gọi $G_1, G_2$ lần lượt là trọng tâm của các tam giác $ABC$ và $ABD$. Đường thẳng $G_1G_2$ song song với mặt phẳng nào sau đây?\nA. $(ABC)$\nB. $(ABD)$\nC. $(BCD)$\nD. $(ACD)$\n\nTóm tắt:\nGT: Tứ diện $ABCD$; $G_1$ là trọng tâm $\\triangle ABC$, $G_2$ là trọng tâm $\\triangle ABD$\nKL: $G_1G_2 \\parallel$ mặt phẳng nào?\n\nĐáp án: C\n\nLời giải: Gọi $M$ là trung điểm $AB$. Ta có $\\dfrac{MG_1}{MC} = \\dfrac{MG_2}{MD} = \\dfrac{1}{3}$ nên $G_1G_2 \\parallel CD$, suy ra $G_1G_2 \\parallel (BCD)$.\n\n---\n\n**Câu 3.** *(Trả lời ngắn)* Một bể cá dạng hình hộp chữ nhật dài $80\\text{ cm}$, rộng $40\\text{ cm}$, cao $50\\text{ cm}$ đang chứa nước cao $30\\text{ cm}$. Thả vào bể một hòn đá có thể tích $6400\\text{ cm}^3$ (chìm hẳn). Hỏi mực nước dâng lên bao nhiêu xăng-ti-mét?\n\nTóm tắt:\n- Cho: đáy bể $80 \\times 40\\ (\\text{cm}^2)$, nước cao $30\\text{ cm}$, $V_{\\text{đá}} = 6400\\text{ cm}^3$\n- Tìm: độ dâng $h$ của mực nước\n\nĐáp án: 2\n\nLời giải: $h = \\dfrac{V_{\\text{đá}}}{S_{\\text{đáy}}} = \\dfrac{6400}{80 \\cdot 40} = 2\\ (\\text{cm})$.\n\n---\n\n**Câu 4.** Cho hình chóp $S.ABCD$ có đáy là hình thang với $AD \\parallel BC$, $AD = 2BC$. Gọi $O$ là giao điểm của $AC$ và $BD$, $G$ là trọng tâm tam giác $SCD$. Chứng minh $OG \\parallel (SBC)$.\n\n### Tóm tắt\nGT: $S.ABCD$, $AD \\parallel BC$, $AD = 2BC$\n$O = AC \\cap BD$; $G$ là trọng tâm $\\triangle SCD$\nKL: $OG \\parallel (SBC)$\n\n### Lời giải\nGọi $I$ là trung điểm $SC$. Vì $AD \\parallel BC$, $AD = 2BC$ nên $\\dfrac{OD}{OB} = 2 \\Rightarrow \\dfrac{DO}{DB} = \\dfrac{2}{3}$.\nLại có $\\dfrac{DG}{DI} = \\dfrac{2}{3}$ nên $OG \\parallel BI$ (định lí Thales trong $\\triangle DBI$).\nMà $BI \\subset (SBC)$, $OG \\not\\subset (SBC)$ nên $OG \\parallel (SBC)$.\n";
+  $('#qsSample2').onclick = () => dl(new Blob([SAMPLE_MD2], { type: 'text/markdown;charset=utf-8' }), 'mau-cau-hoi-tom-tat.md');
+  $('#qsUseSample2').onclick = () => { $('#qsText').value = SAMPLE_MD2; $('#qsMsg').textContent = 'Đã điền mẫu có tóm tắt — bấm ▶ Hiện khung câu hỏi'; };
+  $('#qsUseSample').onclick = () => { $('#qsText').value = SAMPLE_MD; $('#qsMsg').textContent = 'Đã điền file mẫu — bấm ▶ Hiện khung câu hỏi'; };
+  $('#qsClose').onclick = () => $('#qsDlg').close();
+  $('#qsLoad').onclick = () => { if (loadQs($('#qsText').value, 0)) $('#qsDlg').close(); else $('#qsMsg').textContent = '⚠ Không tìm thấy câu hỏi — các câu phải cách nhau bằng một dòng chỉ có ---'; };
+  // kéo thả file .md vào ứng dụng
+  addEventListener('drop', async (e) => { const f = e.dataTransfer && [...e.dataTransfer.files].find((x) => /\.(md|markdown)$/i.test(x.name)); if (f) { e.preventDefault(); e.stopImmediatePropagation(); loadQs(await f.text(), 0); } }, true);
+  addEventListener('resize', () => { if (qp.classList.contains('open')) placeQp(); });
+  { const saved = lget(QS_KEY, null); if (saved && saved.md) setTimeout(() => { if (loadQs(saved.md, saved.idx, true, { orig: saved.orig })) qp.classList.remove('open'); }, 1200); }
+  /* --- trở lại ban đầu + chỉnh sửa câu ngay trong khung --- */
+  function qpReset() {
+    if (!qs) return;
+    qs.seen = {}; showQ(0); $('#qpBody').querySelectorAll('.pick').forEach((b) => b.classList.remove('pick'));
+    toast('Đã trở lại câu 1 — ẩn đáp án, xoá lựa chọn');
+  }
+  $('#qpHome').onclick = qpReset;
+  function qpEdit() {
+    if (!qs) return;
+    const q = qs.items[qs.idx], qi = q.qi;
+    if (qpState.min) { qpState.min = false; placeQp(); saveQp(); }
+    const body = $('#qpBody');
+    body.innerHTML = `<div class="qed"><div class="eb"><b style="align-self:center">✏️ Sửa câu ${qi + 1}</b><small>Dòng <code>+++</code> = ngắt slide · <code>---</code> = tách thành câu mới · Ctrl+Enter: áp dụng</small></div>
+      <textarea spellcheck="false"></textarea>
+      <div class="eb"><button class="p" data-a="ok">✔ Áp dụng</button><button data-a="cancel">✕ Huỷ</button><button data-a="slide">＋ Chèn dấu ngắt slide</button><button data-a="all">📄 Sửa cả bộ…</button><button data-a="dl">⬇ Tải file .md</button><button data-a="orig" title="Bỏ mọi chỉnh sửa, trở về đúng file đã mở ban đầu">⟲ Khôi phục bản gốc</button></div></div>`;
+    const ta = body.querySelector('textarea'); ta.value = qs.blocks[qi];
+    $('#qpEdit').classList.add('on');
+    const apply = () => {
+      const nb = ta.value.replace(/\r/g, '').trim();
+      if (!nb) return toast('Câu đang trống — bấm Huỷ nếu không muốn sửa');
+      const old = qs.blocks[qi]; let md = qs.md;
+      if (md.split(old).length === 2) md = md.replace(old, () => nb);
+      else { const bl = qs.blocks.slice(); bl[qi] = nb; md = (qs.head ? qs.head + '\n\n---\n\n' : '') + bl.join('\n\n---\n\n') + '\n'; }
+      const seen = qs.seen, orig = qs.orig, open = qp.classList.contains('open');
+      const p = parseQs(md); const k = p.items.findIndex((it) => it.qi === qi);
+      if (loadQs(md, k < 0 ? 0 : k, true, { orig })) { qs.seen = seen; showQ(qs.idx); if (!open) qp.classList.remove('open'); }
+      $('#qpEdit').classList.remove('on'); toast('Đã cập nhật câu ' + (qi + 1));
+    };
+    body.querySelector('.qed').onclick = (e) => {
+      const a = e.target.closest('button') && e.target.closest('button').dataset.a; if (!a) return;
+      if (a === 'ok') apply();
+      if (a === 'cancel') { $('#qpEdit').classList.remove('on'); showQ(qs.idx); }
+      if (a === 'slide') { const i = ta.selectionStart, v = ta.value, pre = v.slice(0, i).replace(/[ \t]*$/, ''); ta.value = pre + (pre.endsWith('\n') || !pre ? '' : '\n') + '\n+++\n\n' + v.slice(i).replace(/^\s*/, ''); ta.focus(); }
+      if (a === 'all') { $('#qpEdit').classList.remove('on'); showQ(qs.idx); openQsDlg(); }
+      if (a === 'dl') dl(new Blob([qs.md], { type: 'text/markdown;charset=utf-8' }), (qs.title ? qs.title.replace(/[\\/:*?"<>|]+/g, '').slice(0, 60) : 'cau-hoi') + '.md');
+      if (a === 'orig') { if (qs.md === qs.orig) return toast('Chưa có chỉnh sửa nào'); if (!confirm('Bỏ mọi chỉnh sửa và trở về file ban đầu?')) return; $('#qpEdit').classList.remove('on'); loadQs(qs.orig, 0, true); toast('Đã khôi phục bản gốc'); }
+    };
+    ta.onkeydown = (e) => { e.stopPropagation(); if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); apply(); } if (e.key === 'Escape') { e.preventDefault(); $('#qpEdit').classList.remove('on'); showQ(qs.idx); } };
+    setTimeout(() => ta.focus(), 30);
+  }
+  $('#qpEdit').onclick = () => ($('#qpEdit').classList.contains('on') ? ($('#qpEdit').classList.remove('on'), showQ(qs.idx)) : qpEdit());
+
   /* ---------------- khởi động ---------------- */
   bootStage().then(() => {
     S.addEventListener('keydown', onKeys, true);
@@ -3813,5 +4600,170 @@ function doPost(e) {
   });
 })();
 </script>
+<!-- ===== Trang web nhanh (chỉ hiện khi toàn màn hình / ẩn thanh trên) ===== -->
+<style>
+#qwTab{display:none;position:fixed;right:0;top:38%;width:5px;height:56px;border-radius:7px 0 0 7px;background:rgba(148,163,184,.38);z-index:60;cursor:pointer;transition:width .15s,background .15s;align-items:center;justify-content:center;color:#fff;font-size:12px;overflow:hidden;border:0;padding:0}
+body.hidebar #qwTab{display:flex}
+#qwTab:hover,#qwTab.hot{width:18px;background:rgba(30,41,59,.82)}
+#qwTab b{opacity:0;transition:opacity .15s;font-weight:400;letter-spacing:-1px}
+#qwTab:hover b,#qwTab.hot b{opacity:1}
+#qwTab i{position:absolute;left:1px;top:4px;width:4px;height:4px;border-radius:50%;background:#22c55e;display:none}
+#qwTab.has i{display:block}
+#qwMenu{display:none;position:fixed;right:22px;top:calc(38% - 20px);width:236px;background:rgba(17,20,34,.96);border:1px solid #2d3350;border-radius:12px;padding:6px;z-index:61;box-shadow:0 12px 32px rgba(0,0,0,.4);font-size:13px;color:#e8ebf7;backdrop-filter:blur(6px)}
+#qwMenu.open{display:block}
+#qwMenu h5{margin:2px 6px 6px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#7c86ad;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+#qwMenu h5 span{cursor:pointer;text-transform:none;letter-spacing:0;color:#7c86ad}
+#qwMenu h5 span:hover{color:#fff}
+.qwRow{display:flex;align-items:center;gap:6px;padding:3px 4px 3px 6px;border-radius:8px}
+.qwRow:hover{background:#1f2440}
+.qwRow.cur{background:#1e293b}
+.qwRow .nm{flex:1;display:flex;align-items:center;gap:7px;cursor:pointer;min-width:0;padding:3px 0}
+.qwRow .nm em{flex:none;width:20px;height:20px;border-radius:6px;display:grid;place-items:center;font-style:normal;font-size:11px;font-weight:700;color:#fff}
+.qwRow .nm span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.qwRow button{flex:none;width:24px;height:24px;border:0;border-radius:6px;background:transparent;color:#9aa3c7;cursor:pointer;font-size:13px;padding:0}
+.qwRow button:hover{background:#2563eb;color:#fff}
+.qwRow .x{opacity:0;width:16px;font-size:11px}
+.qwRow:hover .x{opacity:.7}
+#qwMenu .qwAdd{display:none;gap:4px;padding:4px}
+#qwMenu .qwAdd.on{display:flex}
+#qwMenu .qwAdd input{flex:1;min-width:0;background:#0f1220;border:1px solid #2d3350;color:#fff;border-radius:7px;padding:5px 7px;font-size:12px}
+#qwMenu .qwAdd button{border:0;border-radius:7px;background:#2563eb;color:#fff;padding:0 9px;cursor:pointer}
+#qwMenu .qwHint{font-size:11px;color:#6b7399;padding:4px 6px 2px;line-height:1.4}
+#qwPanel{display:none;position:fixed;top:0;right:0;bottom:0;width:var(--qw,50vw);z-index:40;background:#fff;box-shadow:-6px 0 24px rgba(0,0,0,.25)}
+#qwPanel.on{display:block}
+#qwPanel.full{width:100vw;box-shadow:none}
+#qwPanel.hid{visibility:hidden;pointer-events:none}
+#qwPanel iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:none;background:#fff}
+#qwPanel iframe.on{display:block}
+body.qw-half #stageWrap{right:var(--qw,50vw)!important}
+#qwGrip{position:absolute;left:-4px;top:0;bottom:0;width:8px;cursor:col-resize;z-index:2}
+#qwGrip:hover,#qwGrip.drag{background:linear-gradient(90deg,transparent 3px,#2563eb 3px,#2563eb 5px,transparent 5px)}
+#qwPanel.full #qwGrip{display:none}
+#qwBar{position:absolute;top:0;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:2px;padding:0 4px 4px;height:22px;overflow:hidden;align-items:flex-end;border-radius:0 0 10px 10px;background:transparent;transition:height .15s,background .15s}
+#qwBar::before{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:40px;height:4px;border-radius:0 0 4px 4px;background:rgba(100,116,139,.45)}
+#qwBar:hover{height:34px;background:rgba(17,20,34,.92)}
+#qwBar>*{opacity:0;transition:opacity .12s}
+#qwBar:hover>*{opacity:1}
+#qwBar span{color:#cbd5e1;font-size:12px;padding:0 6px;align-self:center;margin-top:8px;white-space:nowrap;max-width:140px;overflow:hidden;text-overflow:ellipsis}
+#qwBar button{border:0;background:transparent;color:#e2e8f0;width:26px;height:26px;border-radius:6px;cursor:pointer;font-size:13px;padding:0}
+#qwBar button:hover{background:#2563eb}
+#qwBar button.on{background:#334155}
+#qwShield{display:none;position:fixed;inset:0;z-index:45;cursor:col-resize}
+</style>
+<button id="qwTab" title="Trang web nhanh — phím O (hoặc Alt+Q): thu gọn / mở lại"><i></i><b>⋮</b></button>
+<div id="qwMenu" role="menu">
+  <h5>Trang web nhanh <span id="qwAddBtn" title="Thêm trang">＋</span></h5>
+  <div id="qwList"></div>
+  <div class="qwAdd" id="qwAdd"><input id="qwAddIn" placeholder="https://… (Enter)"><button id="qwAddOk">Thêm</button></div>
+  <div class="qwHint">◧ nửa phải · ⛶ toàn màn hình · phím <b>O</b> thu gọn / mở lại</div>
+</div>
+<div id="qwPanel"><div id="qwGrip" title="Kéo để đổi độ rộng"></div>
+  <div id="qwBar"><span id="qwName"></span><button id="qwHalf" title="Nửa màn hình bên phải">◧</button><button id="qwFull" title="Toàn màn hình">⛶</button><button id="qwReload" title="Tải lại">↻</button><button id="qwExt" title="Mở ở thẻ trình duyệt mới">↗</button><button id="qwMin" title="Thu gọn (phím O) — bấm O hoặc mép phải để mở lại">—</button><button id="qwClose" title="Đóng trang">✕</button></div>
+</div>
+<div id="qwShield"></div>
+<script>
+(() => {
+  const $ = (s) => document.querySelector(s);
+  const DEF = [
+    { u: 'https://dojotienluc.vercel.app/', n: 'Dojo Tiến Lực', c: '#ef4444' },
+    { u: 'https://trinhchieusn.vercel.app/', n: 'Trình chiếu SN', c: '#f59e0b' },
+    { u: 'https://latexjsonvtl.vercel.app/', n: 'LaTeX → JSON', c: '#2563eb' },
+    { u: 'https://picvtl.vercel.app/', n: 'Pic VTL', c: '#16a34a' },
+  ];
+  const ls = { get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} } };
+  let sites = ls.get('qw.sites', DEF), pref = ls.get('qw.pref', { mode: 'half', w: 50 });
+  const tab = $('#qwTab'), menu = $('#qwMenu'), panel = $('#qwPanel'), list = $('#qwList');
+  const frames = {};             // giữ sẵn từng trang đã mở → chuyển qua lại tức thì
+  let cur = null, mode = pref.mode, hidden = false;
+  const short = (u) => { try { return new URL(u).hostname.replace(/^www\./, '').replace(/\.vercel\.app$/, ''); } catch (e) { return u; } };
+  const COLORS = ['#8b5cf6', '#0ea5e9', '#db2777', '#14b8a6', '#ea580c'];
+  function setW(p) { pref.w = Math.max(25, Math.min(75, p)); document.documentElement.style.setProperty('--qw', pref.w + 'vw'); ls.set('qw.pref', pref); }
+  setW(pref.w);
+  function layout() {
+    const open = !!cur && !hidden && document.body.classList.contains('hidebar');
+    panel.classList.toggle('on', !!cur);
+    panel.classList.toggle('hid', !open);
+    panel.classList.toggle('full', mode === 'full');
+    document.body.classList.toggle('qw-half', open && mode === 'half');
+    tab.classList.toggle('has', !!cur && hidden);
+    $('#qwHalf').classList.toggle('on', mode === 'half'); $('#qwFull').classList.toggle('on', mode === 'full');
+    window.dispatchEvent(new Event('resize'));
+    render();
+  }
+  function render() {
+    list.innerHTML = '';
+    sites.forEach((s, i) => {
+      const r = document.createElement('div'); r.className = 'qwRow' + (cur === s.u ? ' cur' : '');
+      r.innerHTML = `<div class="nm" title="${s.u}"><em style="background:${s.c || COLORS[i % COLORS.length]}">${(s.n || short(s.u)).trim()[0].toUpperCase()}</em><span></span></div><button title="Nửa màn hình bên phải">◧</button><button title="Toàn màn hình">⛶</button><button class="x" title="Bỏ khỏi danh sách">✕</button>`;
+      r.querySelector('span').textContent = s.n || short(s.u);
+      const [bh, bf, bx] = r.querySelectorAll('button');
+      r.querySelector('.nm').onclick = () => open(s, mode);
+      bh.onclick = () => open(s, 'half'); bf.onclick = () => open(s, 'full');
+      bx.onclick = (e) => { e.stopPropagation(); if (!confirm('Bỏ "' + (s.n || s.u) + '" khỏi danh sách?')) return; if (frames[s.u]) { frames[s.u].remove(); delete frames[s.u]; } if (cur === s.u) { cur = null; } sites.splice(i, 1); ls.set('qw.sites', sites); layout(); };
+      list.append(r);
+    });
+  }
+  function open(s, m) {
+    mode = m; pref.mode = m; ls.set('qw.pref', pref);
+    if (!frames[s.u]) {
+      const f = document.createElement('iframe'); f.src = s.u; f.title = s.n || s.u;
+      f.allow = 'fullscreen; clipboard-read; clipboard-write; autoplay; encrypted-media; picture-in-picture; microphone; camera';
+      panel.append(f); frames[s.u] = f;
+    }
+    Object.entries(frames).forEach(([u, f]) => f.classList.toggle('on', u === s.u));
+    cur = s.u; hidden = false; $('#qwName').textContent = s.n || short(s.u);
+    closeMenu(); layout();
+  }
+  const curSite = () => sites.find((s) => s.u === cur) || { u: cur, n: short(cur) };
+  function toggleHide() { if (!cur) { openMenu(); return; } hidden = !hidden; layout(); }
+  function openMenu() { render(); menu.classList.add('open'); tab.classList.add('hot'); }
+  function closeMenu() { menu.classList.remove('open'); tab.classList.remove('hot'); $('#qwAdd').classList.remove('on'); }
+  // mép phải: rê chuột → menu · bấm → thu gọn / mở lại trang đang dùng
+  let hov;
+  tab.onmouseenter = () => { clearTimeout(hov); hov = setTimeout(openMenu, 180); };
+  tab.onmouseleave = () => { clearTimeout(hov); hov = setTimeout(() => { if (!menu.matches(':hover')) closeMenu(); }, 350); };
+  menu.onmouseleave = () => { clearTimeout(hov); hov = setTimeout(() => { if (!menu.matches(':hover') && !tab.matches(':hover') && !$('#qwAdd').classList.contains('on')) closeMenu(); }, 400); };
+  menu.onmouseenter = () => clearTimeout(hov);
+  tab.onclick = (e) => { e.stopPropagation(); clearTimeout(hov); if (cur) { toggleHide(); closeMenu(); } else menu.classList.contains('open') ? closeMenu() : openMenu(); };
+  tab.oncontextmenu = (e) => { e.preventDefault(); openMenu(); };
+  document.addEventListener('pointerdown', (e) => { if (!menu.contains(e.target) && e.target !== tab) closeMenu(); });
+  $('#qwHalf').onclick = () => { mode = 'half'; pref.mode = mode; ls.set('qw.pref', pref); layout(); };
+  $('#qwFull').onclick = () => { mode = 'full'; pref.mode = mode; ls.set('qw.pref', pref); layout(); };
+  $('#qwReload').onclick = () => { const f = frames[cur]; if (f) f.src = f.src; };
+  $('#qwExt').onclick = () => cur && window.open(cur, '_blank', 'noopener');
+  $('#qwMin').onclick = () => { hidden = true; layout(); };
+  $('#qwClose').onclick = () => { if (frames[cur]) { frames[cur].remove(); delete frames[cur]; } cur = null; layout(); };
+  $('#qwAddBtn').onclick = () => { $('#qwAdd').classList.toggle('on'); $('#qwAddIn').focus(); };
+  const addSite = () => {
+    let u = $('#qwAddIn').value.trim(); if (!u) return;
+    if (!/^https?:\/\//i.test(u)) u = 'https://' + u;
+    if (!sites.some((s) => s.u === u)) { sites.push({ u, n: short(u) }); ls.set('qw.sites', sites); }
+    $('#qwAddIn').value = ''; $('#qwAdd').classList.remove('on'); render();
+  };
+  $('#qwAddOk').onclick = addSite;
+  $('#qwAddIn').onkeydown = (e) => { e.stopPropagation(); if (e.key === 'Enter') addSite(); if (e.key === 'Escape') closeMenu(); };
+  // kéo mép trái để đổi độ rộng nửa phải
+  const grip = $('#qwGrip'), shield = $('#qwShield');
+  grip.onpointerdown = (e) => {
+    e.preventDefault(); grip.classList.add('drag'); shield.style.display = 'block';
+    const mv = (ev) => setW((1 - ev.clientX / window.innerWidth) * 100);
+    const up = () => { grip.classList.remove('drag'); shield.style.display = 'none'; removeEventListener('pointermove', mv); removeEventListener('pointerup', up); window.dispatchEvent(new Event('resize')); };
+    addEventListener('pointermove', mv); addEventListener('pointerup', up);
+  };
+  // Alt+Q: thu gọn / mở lại
+  addEventListener('keydown', (e) => { if (e.altKey && (e.key === 'q' || e.key === 'Q' || e.code === 'KeyQ')) { e.preventDefault(); if (document.body.classList.contains('hidebar')) toggleHide(); } }, true);
+  // ra khỏi toàn màn hình → tự thu gọn (trang vẫn giữ nguyên, vào lại là thấy)
+  new MutationObserver(layout).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  // phím O: thu gọn / mở lại trang web (chỉ khi toàn màn hình hoặc ẩn thanh trên; ngoài ra O vẫn là công cụ Elip)
+  window.qwKey = () => { if (!document.body.classList.contains('hidebar')) return false; if (cur) { toggleHide(); closeMenu(); } else menu.classList.contains('open') ? closeMenu() : openMenu(); return true; };
+  addEventListener('keydown', (e) => {
+    const t = e.target; if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+    if ((e.key === 'o' || e.key === 'O') && !e.ctrlKey && !e.metaKey && !e.altKey && window.qwKey()) { e.preventDefault(); e.stopPropagation(); }
+  }, true);
+  window.qwToggle = toggleHide;
+  render();
+})();
+</script>
+
 </body>
 </html>
