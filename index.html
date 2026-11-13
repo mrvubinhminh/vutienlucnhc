@@ -464,6 +464,7 @@ function doPost(e) {
     <button id="qpSum" title="Hiện / ẩn tóm tắt đề (GT / KL) — phím T">📝 Tóm tắt</button>
     <button id="qpTheme" title="Màu nền khung & màu công thức">🎨</button>
     <button id="qpEdit" title="Chỉnh sửa câu này ngay trong khung (phím E)">✏️</button>
+    <button id="qpOpen" title="Tải file .md khác lên — thay toàn bộ bộ câu hỏi (kéo thả file vào cũng được)">📂</button>
     <button id="qpBoard" title="Chép câu này lên bảng vẽ (để viết, gạch chân trên đó)">📌</button>
     <button id="qpMin" title="Thu gọn / mở rộng">▁</button><button id="qpClose" title="Đóng khung câu hỏi">✕</button>
   </div>
@@ -487,6 +488,7 @@ function doPost(e) {
   <p class="muted" id="qsMsg"></p>
   <div class="acts"><button type="button" id="qsClose">Đóng</button><button type="button" class="p" id="qsLoad">▶ Hiện khung câu hỏi</button></div>
 </div></dialog>
+<input type="file" id="qpIn" accept=".md,.markdown,.txt,text/markdown,text/plain" hidden>
 <input type="file" id="qsIn" accept=".md,.markdown,.txt,text/markdown,text/plain" hidden>
 <input type="file" id="fileIn" accept="application/pdf,image/*,video/*,.html,.htm,.md,.markdown" multiple hidden>
 <input type="file" id="sesIn" accept=".json,application/json" hidden>
@@ -4550,23 +4552,33 @@ function doPost(e) {
     toast('Đã trở lại câu 1 — ẩn đáp án, xoá lựa chọn');
   }
   $('#qpHome').onclick = qpReset;
-  function qpEdit() {
+  function qpEdit(full) {
     if (!qs) return;
     const q = qs.items[qs.idx], qi = q.qi;
     if (qpState.min) { qpState.min = false; placeQp(); saveQp(); }
     const body = $('#qpBody');
-    body.innerHTML = `<div class="qed"><div class="eb"><b style="align-self:center">✏️ Sửa câu ${qi + 1}</b><small>Dòng <code>+++</code> = ngắt slide · <code>---</code> = tách thành câu mới · Ctrl+Enter: áp dụng</small></div>
+    body.innerHTML = `<div class="qed"><div class="eb"><b style="align-self:center">${full ? '📄 Sửa / thay toàn bộ mã .md' : '✏️ Sửa câu ' + (qi + 1)}</b><small>Dòng <code>+++</code> = ngắt slide · <code>---</code> = tách câu · Ctrl+Enter: áp dụng</small></div>
       <textarea spellcheck="false"></textarea>
-      <div class="eb"><button class="p" data-a="ok">✔ Áp dụng</button><button data-a="cancel">✕ Huỷ</button><button data-a="slide">＋ Chèn dấu ngắt slide</button><button data-a="all">📄 Sửa cả bộ…</button><button data-a="dl">⬇ Tải file .md</button><button data-a="orig" title="Bỏ mọi chỉnh sửa, trở về đúng file đã mở ban đầu">⟲ Khôi phục bản gốc</button></div></div>`;
-    const ta = body.querySelector('textarea'); ta.value = qs.blocks[qi];
+      <div class="eb"><button class="p" data-a="ok">✔ Áp dụng</button><button data-a="cancel">✕ Huỷ</button>` +
+      (full ? `<button data-a="clear">🧹 Xoá hết để dán mã mới</button><button data-a="up">📂 Tải file .md lên</button><button data-a="one">✏️ Chỉ sửa câu ${qi + 1}</button>`
+            : `<button data-a="slide">＋ Chèn dấu ngắt slide</button><button data-a="all">📄 Sửa / thay cả bộ</button>`) +
+      `<button data-a="dl">⬇ Tải file .md</button><button data-a="orig" title="Bỏ mọi chỉnh sửa, trở về đúng file đã mở ban đầu">⟲ Khôi phục bản gốc</button></div></div>`;
+    const ta = body.querySelector('textarea'); ta.value = full ? qs.md : qs.blocks[qi];
     $('#qpEdit').classList.add('on');
+    const close = () => { $('#qpEdit').classList.remove('on'); showQ(qs.idx); };
     const apply = () => {
       const nb = ta.value.replace(/\r/g, '').trim();
-      if (!nb) return toast('Câu đang trống — bấm Huỷ nếu không muốn sửa');
+      if (!nb) return toast(full ? 'Chưa có nội dung — dán mã .md vào ô rồi bấm Áp dụng' : 'Câu đang trống — bấm Huỷ nếu không muốn sửa');
+      const seen = qs.seen, orig = qs.orig, open = qp.classList.contains('open');
+      if (full) {
+        if (!parseQs(nb).items.length) return toast('⚠ Không tìm thấy câu hỏi — các câu phải cách nhau bằng một dòng chỉ có ---');
+        const keep = qs.idx;
+        if (loadQs(nb + '\n', 0, true, { orig })) { showQ(Math.min(keep, qs.items.length - 1)); if (!open) qp.classList.remove('open'); }
+        $('#qpEdit').classList.remove('on'); toast(`Đã thay toàn bộ — ${qs.nq} câu hỏi`); return;
+      }
       const old = qs.blocks[qi]; let md = qs.md;
       if (md.split(old).length === 2) md = md.replace(old, () => nb);
       else { const bl = qs.blocks.slice(); bl[qi] = nb; md = (qs.head ? qs.head + '\n\n---\n\n' : '') + bl.join('\n\n---\n\n') + '\n'; }
-      const seen = qs.seen, orig = qs.orig, open = qp.classList.contains('open');
       const p = parseQs(md); const k = p.items.findIndex((it) => it.qi === qi);
       if (loadQs(md, k < 0 ? 0 : k, true, { orig })) { qs.seen = seen; showQ(qs.idx); if (!open) qp.classList.remove('open'); }
       $('#qpEdit').classList.remove('on'); toast('Đã cập nhật câu ' + (qi + 1));
@@ -4574,15 +4586,28 @@ function doPost(e) {
     body.querySelector('.qed').onclick = (e) => {
       const a = e.target.closest('button') && e.target.closest('button').dataset.a; if (!a) return;
       if (a === 'ok') apply();
-      if (a === 'cancel') { $('#qpEdit').classList.remove('on'); showQ(qs.idx); }
+      if (a === 'cancel') close();
       if (a === 'slide') { const i = ta.selectionStart, v = ta.value, pre = v.slice(0, i).replace(/[ \t]*$/, ''); ta.value = pre + (pre.endsWith('\n') || !pre ? '' : '\n') + '\n+++\n\n' + v.slice(i).replace(/^\s*/, ''); ta.focus(); }
-      if (a === 'all') { $('#qpEdit').classList.remove('on'); showQ(qs.idx); openQsDlg(); }
+      if (a === 'all') qpEdit(true);
+      if (a === 'one') qpEdit(false);
+      if (a === 'clear') { ta.value = ''; ta.focus(); toast('Dán mã .md mới vào ô (Ctrl+V) rồi bấm ✔ Áp dụng'); }
+      if (a === 'up') $('#qpIn').click();
       if (a === 'dl') dl(new Blob([qs.md], { type: 'text/markdown;charset=utf-8' }), (qs.title ? qs.title.replace(/[\\/:*?"<>|]+/g, '').slice(0, 60) : 'cau-hoi') + '.md');
-      if (a === 'orig') { if (qs.md === qs.orig) return toast('Chưa có chỉnh sửa nào'); if (!confirm('Bỏ mọi chỉnh sửa và trở về file ban đầu?')) return; $('#qpEdit').classList.remove('on'); loadQs(qs.orig, 0, true); toast('Đã khôi phục bản gốc'); }
+      if (a === 'orig') { if (qs.md === qs.orig) return toast('Chưa có chỉnh sửa nào'); if (!confirm('Bỏ mọi chỉnh sửa và trở về file ban đầu?')) return; $('#qpEdit').classList.remove('on'); loadQs(qs.orig, 0, true, { orig: qs.orig }); toast('Đã khôi phục bản gốc'); }
     };
-    ta.onkeydown = (e) => { e.stopPropagation(); if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); apply(); } if (e.key === 'Escape') { e.preventDefault(); $('#qpEdit').classList.remove('on'); showQ(qs.idx); } };
+    ta.onkeydown = (e) => { e.stopPropagation(); if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); apply(); } if (e.key === 'Escape') { e.preventDefault(); close(); } };
+    ta.addEventListener('paste', (e) => { e.stopPropagation(); }, true);
     setTimeout(() => ta.focus(), 30);
   }
+  // tải file .md mới lên → thay toàn bộ bộ câu hỏi (bản gốc mới = file này)
+  $('#qpOpen').onclick = () => $('#qpIn').click();
+  $('#qpIn').onchange = async (e) => {
+    const f = e.target.files[0]; e.target.value = ''; if (!f) return;
+    const t = await f.text();
+    if (qs && qs.md !== qs.orig && !confirm('Bộ câu hỏi đang có chỉnh sửa chưa tải về. Vẫn thay bằng file "' + f.name + '"?')) return;
+    if (loadQs(t, 0, true, { orig: t })) toast(`Đã tải ${f.name} — ${qs.nq} câu hỏi`);
+    else toast('⚠ ' + f.name + ': không tìm thấy câu hỏi — các câu phải cách nhau bằng dòng ---');
+  };
   $('#qpEdit').onclick = () => ($('#qpEdit').classList.contains('on') ? ($('#qpEdit').classList.remove('on'), showQ(qs.idx)) : qpEdit());
 
   /* ---------------- khởi động ---------------- */
